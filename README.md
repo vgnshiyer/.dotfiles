@@ -7,13 +7,18 @@ Device: Macbook Air
 OS: MacOS(Sonama)
 Ram: 8gb
 Chip: Apple M1
+Tools:
+ - Arc Browser
+ - AdBlock
+ - Vimium (operate links with keyboard)
 
 **Secondary**
 Device: Ipad 9
 OS: IpadOS 17
-Tool: WorkingCopy
+Tools: 
+ - WorkingCopy
 
-## 2. Getting started
+## 2. Dev workflow
 
 ### 2.1 Shell setup
 
@@ -27,13 +32,7 @@ xcode-select --install
 git clone https://github.com/vgnshiyer/.dotfiles ~/.dotfiles
 ```
 
-3. Create symlinks in the home dirctory
-```bash
-ln -s ~/.dotfiles/.zshrc ~/.zshrc
-ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
-```
-
-4. Install Homebrew, and software listed in brewfile
+3. Install Homebrew, and software listed in brewfile
 ```bash
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -45,7 +44,7 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 brew bundle --file ~/.dotfiles/Brewfile
 ```
 
-5. Configure git
+4. Configure git
 ```bash
 # Set your global Git username and email
 git config --global user.name "YOUR_NAME"
@@ -55,11 +54,44 @@ git config --global user.email your@email
 git config --global credentials.helper osxkeychain
 ```
 
-### 2.2 MacOS system settings
+5. Track changes with stow
+```bash
+stow .
+```
+
+### 2.2 Terminal Setup
+
+1. Install fish cli
+```bash
+# install fish
+brew install fish
+
+# add fish to shells
+echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
+
+# change default shell
+chsh -s /opt/homebrew/bin/fish
+
+# Update fish config
+stow . --force
+```
+
+2. Install alacritty
+```bash
+brew install --cask alacritty
+
+# add fonts
+brew tap epk/epk
+
+# install sf-mono-nerd-font
+brew install --cask font-sf-mono-nerd-font
+```
+
+### 2.3 MacOS system settings
 
 Have this clutter-free look to mac os
 
-1. Hide dock
+1. Automatically Hide dock & menu bar
 2. Configure keyboard shortcuts
 ```txt
 keyboard shortcutes --> Mission Control
