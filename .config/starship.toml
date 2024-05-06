@@ -1,0 +1,26 @@
+
+# ███████╗████████╗ █████╗ ██████╗ ███████╗██╗  ██╗██╗██████╗
+# ██╔════╝╚══██╔══╝██╔══██╗██╔══██╗██╔════╝██║  ██║██║██╔══██╗
+# ███████╗   ██║   ███████║██████╔╝███████╗███████║██║██████╔╝
+# ╚════██║   ██║   ██╔══██║██╔══██╗╚════██║██╔══██║██║██╔═══╝
+# ███████║   ██║   ██║  ██║██║  ██║███████║██║  ██║██║██║
+# ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝
+# The minimal, blazing-fast, and infinitely customizable prompt
+# https://starship.rs
+
+[character]
+success_symbol = "❱"
+vicmd_symbol = " "
+error_symbol = " "
+
+[directory]
+style = "blue gold"
+
+[package]
+disabled = true
+
+[username]
+disabled = true
+
+[hostname]
+disabled = true

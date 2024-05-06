@@ -85,6 +85,9 @@ brew tap epk/epk
 
 # install sf-mono-nerd-font
 brew install --cask font-sf-mono-nerd-font
+
+# install starship
+brew install startship
 ```
 
 ### 2.3 MacOS system settings
