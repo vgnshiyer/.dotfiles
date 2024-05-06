@@ -1,6 +1,8 @@
 tap "homebrew/bundle"
 # Distributed revision control system
 brew "git"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
+brew "stow"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Open-source code editor
