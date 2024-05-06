@@ -20,7 +20,7 @@ Tools:
 
 ## 2. Dev workflow
 
-### 2.1 Shell setup
+### 2.1 Shell
 
 1. Install Apple's CLI tools
 ```bash
@@ -59,7 +59,7 @@ git config --global credentials.helper osxkeychain
 stow .
 ```
 
-### 2.2 Terminal Setup
+### 2.2 Terminal
 
 1. Install fish cli
 ```bash
@@ -101,4 +101,19 @@ keyboard shortcutes --> Mission Control
   1. ⌥ Option + 1 : switch to window 1
   2. ⌥ Option + 2 : switch to window 2
   3. ⌥ Option + 3 : switch to window 3
+```
+
+### 2.4 Window manager
+
+1. Install yabai
+```bash
+# Install yabai: https://github.com/koekeishiya/yabai
+brew install koekeishiya/formulae/yabai
+
+# Install skhd
+brew install koekeishiya/formulae/skhd
+
+# Start services
+skhd --start-service
+yabai --start-service
 ```

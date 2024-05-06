@@ -1,5 +1,6 @@
 tap "epk/epk"
 tap "homebrew/bundle"
+tap "koekeishiya/formulae"
 # User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
 # Distributed revision control system
@@ -10,6 +11,12 @@ brew "starship"
 brew "stow"
 # Vi 'workalike' with many additional features
 brew "vim"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
+# Simple hotkey-daemon for macOS.
+brew "koekeishiya/formulae/skhd"
+# A tiling window manager for macOS based on binary space partitioning.
+brew "koekeishiya/formulae/yabai"
 # GPU-accelerated terminal emulator
 cask "alacritty"
 cask "font-sf-mono-nerd-font"
