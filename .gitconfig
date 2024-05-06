@@ -1,3 +1,7 @@
 [user]
 	name = Vignesh Iyer
 	email = vgnshiyer@asu.edu
+[credential]
+	helper = osxkeychain
+[credentials]
+	helper = osxkeychain

@@ -35,3 +35,13 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 # Install software from Brewfile
 brew bundle --file ~/.dotfiles/Brewfile
 ```
+
+5. Configure git
+```bash
+# Set your global Git username and email
+git config --global user.name "YOUR_NAME"
+git config --global user.email your@email
+
+# Set Git to use the OSX keychain as the credential helper [Credentials will be stored] (`store` option will be stored as plaintext)
+git config --global credentials.helper osxkeychain
+```
