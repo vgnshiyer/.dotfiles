@@ -1,10 +1,18 @@
+tap "epk/epk"
 tap "homebrew/bundle"
+# User-friendly command-line shell for UNIX-like operating systems
+brew "fish"
 # Distributed revision control system
 brew "git"
+# Cross-shell prompt for astronauts
+brew "starship"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
 # Vi 'workalike' with many additional features
 brew "vim"
+# GPU-accelerated terminal emulator
+cask "alacritty"
+cask "font-sf-mono-nerd-font"
 # Open-source code editor
 cask "visual-studio-code"
 vscode "4ops.terraform"

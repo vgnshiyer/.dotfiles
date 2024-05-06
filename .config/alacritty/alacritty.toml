@@ -1,0 +1,23 @@
+live_config_reload = true
+
+[cursor]
+blink_interval = 500
+
+[cursor.style]
+blinking = "Always"
+
+[font]
+size = 16.0
+
+[font.normal]
+family = "SFMono Nerd Font"
+style = "Regular"
+
+[window]
+decorations = "buttonless"
+dynamic_padding = false
+opacity = 0.85
+
+[window.padding]
+x = 18
+y = 16
