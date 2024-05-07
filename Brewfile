@@ -13,6 +13,8 @@ brew "starship"
 brew "stow"
 # Terminal multiplexer
 brew "tmux"
+# Plugin manager for tmux
+brew "tpm"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Shell extension to navigate your filesystem faster
