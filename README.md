@@ -123,3 +123,15 @@ brew install koekeishiya/formulae/skhd
 skhd --start-service
 yabai --start-service
 ```
+
+### 2.5 Code Editor
+
+1. Link vscode settings
+```bash
+# remove existing files
+rm ~/Library/Application\ Support/Code/User/settings.json ~/Library/Application\ Support/Code/User/keybindings.json
+
+# link settings
+ln -s /Users/vgnshiyer/.dotfiles/vscode_settings/settings.json /Users/vgnshiyer/Library/Application\ Support/Code/User/settings.json
+ln -s /Users/vgnshiyer/.dotfiles/vscode_settings/keybindings.json /Users/vgnshiyer/Library/Application\ Support/Code/User/keybindings.json
+```
