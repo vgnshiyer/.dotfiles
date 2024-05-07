@@ -90,6 +90,12 @@ brew install --cask font-sf-mono-nerd-font
 brew install startship
 ```
 
+3. Install tmux
+```bash
+# Install tmux
+brew install tmux
+```
+
 ### 2.3 MacOS system settings
 
 Have this clutter-free look to mac os
