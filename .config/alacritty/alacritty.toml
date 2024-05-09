@@ -31,6 +31,12 @@ chars = "\uE000"
 key = "T"
 mods = "Command"
 
+# open new tmux window with fzf
+[[keyboard.bindings]]
+chars = "\uE013"
+key = "T"
+mods = "Command|Shift"
+
 # close tmux window/pane
 [[keyboard.bindings]]
 chars = "\uE001"
