@@ -1,6 +1,8 @@
 tap "epk/epk"
 tap "homebrew/bundle"
 tap "koekeishiya/formulae"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
 # User-friendly command-line shell for UNIX-like operating systems
 brew "fish"
 # Command-line fuzzy finder written in Go
@@ -60,6 +62,7 @@ vscode "redhat.vscode-xml"
 vscode "ritwickdey.liveserver"
 vscode "rust-lang.rust-analyzer"
 vscode "shd101wyy.markdown-preview-enhanced"
+vscode "tamasfe.even-better-toml"
 vscode "teabyii.ayu"
 vscode "visualstudioexptteam.intellicode-api-usage-examples"
 vscode "visualstudioexptteam.vscodeintellicode"

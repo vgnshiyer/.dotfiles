@@ -24,212 +24,85 @@ y = 16
 
 # Key Bindings
 
+# Reference: https://medium.com/@jogarcia/alacritty-with-tmux-escape-sequence-for-custom-binding-47df5e401c51
+# open new tmux window
 [[keyboard.bindings]]
-chars = "\u0002 "
-key = "C"
-mods = "Command|Shift"
-
-[[keyboard.bindings]]
-chars = "\u0002\""
-key = "E"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = "\u0002%"
-key = "E"
-mods = "Command|Shift"
-
-[[keyboard.bindings]]
-chars = """
-:Grep
-"""
-key = "F"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = "\u0002[/"
-key = "F"
-mods = "Command|Shift"
-
-[[keyboard.bindings]]
-chars = "\u0002g"
-key = "G"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = "\u0002G"
-key = "G"
-mods = "Command|Shift"
-
-[[keyboard.bindings]]
-chars = "\u0002T"
-key = "J"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = "\u0002T"
-key = "K"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = "\u0002L"
-key = "L"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = "\u0002u"
-key = "O"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = """
-:GoToFile
-"""
-key = "P"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = """
-:GoToCommand
-"""
-key = "P"
-mods = "Command|Shift"
-
-[[keyboard.bindings]]
-chars = """
-:q
-"""
-key = "Q"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = """
-\u001B:w
-"""
-key = "S"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = """
-\u001B:wq
-"""
-key = "S"
-mods = "Command|Shift"
-
-[[keyboard.bindings]]
-chars = "\u0002c"
+chars = "\uE000"
 key = "T"
 mods = "Command"
 
+# close tmux window/pane
 [[keyboard.bindings]]
-chars = "\u0002]"
-key = "V"
-mods = "Command|Shift"
-
-[[keyboard.bindings]]
-chars = "\u0002P"
-key = "T"
-mods = "Command|Shift"
-
-[[keyboard.bindings]]
-chars = "\u0002x"
+chars = "\uE001"
 key = "W"
 mods = "Command"
 
+# split tmux window horizontally
 [[keyboard.bindings]]
-chars = "\u0002z"
-key = "Z"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = "\u0002n"
-key = "Tab"
-mods = "Control"
-
-# TODO: fix "Grave"
-# [[keyboard.bindings]]
-# chars = "\u0002p"
-# key = "Grave"
-# mods = "Control"
-
-[[keyboard.bindings]]
-chars = "\u0002,"
-key = "Comma"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = """
-:ZenMode
-"""
-key = "Period"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = "\u000F"
-key = "LBracket"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = "\u0002p"
-key = "LBracket"
+chars = "\uE002"
+key = "H"
 mods = "Command|Shift"
 
+# split tmux window vertically
 [[keyboard.bindings]]
-chars = "\t"
-key = "RBracket"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = "\u0002n"
-key = "RBracket"
+chars = "\uE003"
+key = "V"
 mods = "Command|Shift"
 
+# switch to next window
 [[keyboard.bindings]]
-chars = "\u0002:"
-key = "Semicolon"
+chars = "\uE113"
+key = "Right"
+mods = "Command|alt"
+
+# switch to previous window
+[[keyboard.bindings]]
+chars = "\uE114"
+key = "Left"
+mods = "Command|alt"
+
+# select tmux windows
+[[keyboard.bindings]]
+chars = "\uE004"
+key = "1"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\u00021"
-key = "Key1"
+chars = "\uE005"
+key = "2"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\u00022"
-key = "Key2"
+chars = "\uE006"
+key = "3"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\u00023"
-key = "Key3"
+chars = "\uE007"
+key = "4"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\u00024"
-key = "Key4"
+chars = "\uE008"
+key = "5"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\u00025"
-key = "Key5"
+chars = "\uE009"
+key = "6"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\u00026"
-key = "Key6"
+chars = "\uE010"
+key = "7"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\u00027"
-key = "Key7"
+chars = "\uE011"
+key = "8"
 mods = "Command"
 
 [[keyboard.bindings]]
-chars = "\u00028"
-key = "Key8"
-mods = "Command"
-
-[[keyboard.bindings]]
-chars = "\u00029"
-key = "Key9"
+chars = "\uE012"
+key = "9"
 mods = "Command"
