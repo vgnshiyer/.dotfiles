@@ -10,10 +10,10 @@
 
 set hidden
 set icons
-set number
+# set number
 set preview
-set previewer ~/.dotfiles/.config/lf/lf-previewer.sh
-set relativenumber
+# set previewer ~/.dotfiles/.config/lf/lf-previewer.sh
+# set relativenumber
 set shell fish
 
 set promptfmt "\033[34;1m%d\033[0m\033[1m%f\033[0m"
