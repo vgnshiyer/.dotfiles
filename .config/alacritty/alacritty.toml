@@ -43,6 +43,12 @@ chars = "\uE001"
 key = "W"
 mods = "Command"
 
+# detach tmux session
+[[keyboard.bindings]]
+chars = "\uE014"
+key = "M"
+mods = "Command|Shift"
+
 # split tmux window horizontally
 [[keyboard.bindings]]
 chars = "\uE002"
