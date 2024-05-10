@@ -16,5 +16,10 @@ fzf --fish | source
 
 set -U fish_greeting # disable fish greeting
 
-# display random pokemon and system information
-pokemon-colorscripts -r && neofetch
+# show randow pokemon
+set ppid (ps -o ppid= -p $fish_pid)
+set parent (ps -o comm= -p $ppid)
+
+if not string match -rq "fzf" $parent
+    pokemon-colorscripts -r && neofetch
+end
