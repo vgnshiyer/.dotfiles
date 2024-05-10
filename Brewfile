@@ -9,6 +9,8 @@ brew "fish"
 brew "fzf"
 # Distributed revision control system
 brew "git"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
 # Cross-shell prompt for astronauts
 brew "starship"
 # Organize software neatly under a single directory tree (e.g. /usr/local)
