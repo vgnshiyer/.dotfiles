@@ -8,20 +8,18 @@ gui:
   language: "auto"
   theme:
     activeBorderColor:
-      - white
+      - "#FFAF88"
       - bold
     inactiveBorderColor:
-      - black
+      - "#87AFFF"
     optionsTextColor:
-      - black
+      - "#87AFFF"
     selectedLineBgColor:
-      - black
+      - "#4E4E4E"
     cherryPickedCommitBgColor:
-      - blue
+      - "#87AFFF"
     cherryPickedCommitFgColor:
       - cyan
-    unstagedChangesColor:
-      - white
   commitLength:
     show: true
   mouseEvents: true
