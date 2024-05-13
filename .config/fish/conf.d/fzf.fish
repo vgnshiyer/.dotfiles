@@ -18,6 +18,7 @@ set -Ux FZF_DEFAULT_OPTS "\
 --marker=' ' \
 --no-info \
 --no-separator \
+--preview=\"cat {}\" \
 --pointer='👉' \
 --reverse"
 
