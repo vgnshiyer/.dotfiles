@@ -32,7 +32,7 @@ vim.opt.ignorecase = true
 
 -- gutter
 vim.opt.number = false
-vim.opt.relativenumber = false
+vim.opt.relativenumber = true
 
 -- indent
 vim.opt.tabstop = 2
