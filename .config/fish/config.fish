@@ -20,6 +20,9 @@ set -U fish_greeting # disable fish greeting
 set ppid (ps -o ppid= -p $fish_pid)
 set parent (ps -o comm= -p $ppid)
 
-if not string match -rq "fzf" $parent
+if not string match -rq fzf $parent
     pokemon-colorscripts -r && neofetch
 end
+
+# Aliases
+alias nv nvim
