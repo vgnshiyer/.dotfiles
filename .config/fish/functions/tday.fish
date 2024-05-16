@@ -15,4 +15,6 @@ function tday
 
     cp $template_file $filename
     nvim $filename
+
+    sync_sb
 end

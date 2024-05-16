@@ -14,11 +14,13 @@ function zet
     if test -f $filename
         echo "File already exists"
     else
-        echo "# Created on $todays_date" >$filename
+        echo "Created on $todays_date" >$filename
         echo "" >>$filename
 
         cat $zettel_template_dir >>$filename
     end
 
     nvim $filename
+
+    sync_sb
 end
