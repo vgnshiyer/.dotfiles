@@ -20,7 +20,7 @@ function zet
         cat $zettel_template_dir >>$filename
     end
 
-    nvim $filename
+    code $filename
 
     sync_sb
 end

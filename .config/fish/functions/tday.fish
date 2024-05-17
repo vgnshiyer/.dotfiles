@@ -9,12 +9,12 @@ function tday
 
     if test -f $filename
         echo "Today's note already exists. Opening it."
-        nvim $filename
+        code $filename
         return
     end
 
     cp $template_file $filename
-    nvim $filename
+    code $filename
 
     sync_sb
 end
