@@ -5,7 +5,8 @@ return {
     require('lualine').setup({
       options = {
         theme = 'dracula'
-      }
+      },
+      ignore_focus = { 'neotree' }
     })
   end
 }
