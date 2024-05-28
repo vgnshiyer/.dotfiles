@@ -1,5 +1,6 @@
 # function that opens today's daily note.
 function tday
+    sync_sb
     set template_file "$HOME/Documents/second-brain/888-Templates/Daily Note Template.md"
     set daily_notes_dir "$HOME/Documents/second-brain/2-Daily Notes/"
     set todays_date (date "+%Y-%m-%d")
@@ -15,6 +16,4 @@ function tday
 
     cp $template_file $filename
     code $filename
-
-    sync_sb
 end
