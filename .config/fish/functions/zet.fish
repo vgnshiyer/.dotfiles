@@ -1,8 +1,7 @@
 function zet
     sync_sb
-
     set zettel_template_dir "$HOME/Documents/second-brain/888-Templates/zettel.md"
-    set zettel_dir "$HOME/Documents/second-brain/1-zettelkasten/
+    set zettel_dir "$HOME/Documents/second-brain/1-zettelkasten/"
     set inbox_dir "$HOME/Documents/second-brain/0-inbox/"
     set todays_date (date "+%Y-%m-%d_%H-%M-%S")
 
@@ -22,10 +21,12 @@ function zet
         echo "File already exists"
         code $filename_zettel
     else
-        echo "Created on $todays_date" >$filename
-
-        cat $zettel_template_dir >>$filename
+        echo "Created on $todays_date" > $filename_inbox
+        cat $zettel_template_dir >> $filename_inbox
+        code $filename_inbox
     end
-
-    code $filename
 end
+
+
+
+
