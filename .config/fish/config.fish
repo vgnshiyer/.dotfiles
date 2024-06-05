@@ -30,3 +30,4 @@ alias nv nvim
 # Custom cron job to sync second brain in iCloud-Mobile drive
 # crontab -l | grep -v sync_sb | begin; cat; echo "0 * * * * /opt/homebrew/bin/fish -c 'sync_sb'"; end | crontab -
 
+set -gx PATH /usr/local/mysql/bin $PATH
