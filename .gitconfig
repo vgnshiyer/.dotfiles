@@ -5,3 +5,6 @@
 	helper = osxkeychain
 [credentials]
 	helper = osxkeychain
+
+[includeIf "gitdir:~/work-repos/"]
+    path = ~/work-repos/.gitconfig
