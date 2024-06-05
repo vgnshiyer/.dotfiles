@@ -1,3 +1,3 @@
 function sync_sb
-    rsync -av --delete "/Users/(whoami)/Documents/second-brain/" "/Users/vgnshiyer/Library/Mobile Documents/iCloud~md~obsidian/Documents/second-brain/"
+    rsync -av --delete "$HOME/Documents/second-brain/" "$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/second-brain/"
 end
