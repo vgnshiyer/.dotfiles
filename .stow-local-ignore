@@ -2,3 +2,4 @@ Brewfile
 README.md
 .git
 LICENSE
+Brewfile.lock.json
