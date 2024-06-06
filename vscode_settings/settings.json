@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "GitHub Dark Dimmed",
+    "workbench.colorTheme": "GitHub Dark Default",
     "files.autoSave": "afterDelay",
     "editor.cursorStyle": "block",
     "editor.cursorBlinking": "expand",
@@ -9,7 +9,7 @@
     "breadcrumbs.enabled": false,
     "liveshare.accessibility.soundsEnabled": false,
     "github.copilot.enable": {
-        "*": false,
+        "*": true,
         "plaintext": false,
         "markdown": false,
         "scminput": false

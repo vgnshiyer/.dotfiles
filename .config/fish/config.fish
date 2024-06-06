@@ -30,4 +30,6 @@ alias nv nvim
 # Custom cron job to sync second brain in iCloud-Mobile drive
 # crontab -l | grep -v sync_sb | begin; cat; echo "0 * * * * /opt/homebrew/bin/fish -c 'sync_sb'"; end | crontab -
 
+## Required for setting up mysql8.0 and python mysqlclient
 set -gx PATH /usr/local/mysql/bin $PATH
+export DYLD_LIBRARY_PATH="/usr/local/mysql/lib" 
