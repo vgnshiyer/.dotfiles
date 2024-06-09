@@ -44,13 +44,13 @@ def list_pokemon_names() -> None:
 
 
 def show_pokemon_by_name(
-    name: str, show_title: bool, shiny: bool, is_large: bool, form: str = ""
+    name: str, show_title: bool, shiny: bool, form: str = ""
 ) -> None:
     base_path = COLORSCRIPTS_DIR
     color_subdir = SHINY_SUBDIR if shiny else REGULAR_SUBDIR
     # default to smaller size as this makes sense for most font size + terminal
     # size combinations
-    size_subdir = LARGE_SUBDIR if is_large else SMALL_SUBDIR
+    size_subdir = SMALL_SUBDIR
     with open(f"{PROGRAM_DIR}/pokemon.json") as file:
         pokemon_json = json.load(file)
         pokemon_names = {pokemon["name"] for pokemon in pokemon_json}
@@ -82,7 +82,7 @@ def show_pokemon_by_name(
     
 
 def show_random_pokemon(
-    generations: str, show_title: bool, shiny: bool, is_large: bool
+    generations: str, show_title: bool, shiny: bool 
 ) -> None:
     # Generation list
     if len(generations.split(",")) > 1:
@@ -108,7 +108,7 @@ def show_random_pokemon(
         # pokemon to be shiny. If the flag is set, always show shiny
         if not shiny:
             shiny = random.random() <= SHINY_RATE
-        show_pokemon_by_name(random_pokemon, show_title, shiny, is_large)
+        show_pokemon_by_name(random_pokemon, show_title, shiny)
     except KeyError:
         print(f"Invalid generation '{generations}'")
         sys.exit(1)
@@ -153,14 +153,6 @@ def main() -> None:
         action="store_true",
         help="Show the shiny version of the pokemon instead",
     )
-    # ideally this argument should be --large, but using --big as -l is already
-    # taken
-    parser.add_argument(
-        "-b",
-        "--big",
-        action="store_true",
-        help="Show a larger version of the sprite",
-    )
     parser.add_argument(
         "-r",
         "--random",
@@ -179,12 +171,12 @@ def main() -> None:
     if args.list:
         list_pokemon_names()
     elif args.name:
-        show_pokemon_by_name(args.name, args.no_title, args.shiny, args.big, args.form)
+        show_pokemon_by_name(args.name, args.no_title, args.shiny, args.form)
     elif args.random:
         if args.form:
             print("--form flag unexpected with --random")
             sys.exit(1)
-        show_random_pokemon(args.random, args.no_title, args.shiny, args.big)
+        show_random_pokemon(args.random, args.no_title, args.shiny)
     else:
         parser.print_help()
 

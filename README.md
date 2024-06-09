@@ -23,8 +23,8 @@ Tools:
 ### 2.1 Shell
 
 1. Install Apple's CLI tools
-```bash
-xcode-select --install
+```
+bash xcode-select --install
 ```
 
 2. Clone repo into a new directory
@@ -134,4 +134,11 @@ rm ~/Library/Application\ Support/Code/User/settings.json ~/Library/Application\
 # link settings
 ln -s /Users/vgnshiyer/.dotfiles/vscode_settings/settings.json /Users/vgnshiyer/Library/Application\ Support/Code/User/settings.json
 ln -s /Users/vgnshiyer/.dotfiles/vscode_settings/keybindings.json /Users/vgnshiyer/Library/Application\ Support/Code/User/keybindings.json
+```
+
+## 3 Bonus 
+
+1. Add pokefetch to your terminal session (Display a random pokemon along with system info to your terminal)
+```bash
+sudo ln -s ~/.dotfiles/bin/pokefetech/pokefetch.py /usr/local/bin/pokefetch
 ```
