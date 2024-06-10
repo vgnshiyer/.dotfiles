@@ -19,6 +19,7 @@ set backspace=indent,eol,start
 
 " visual
 colorscheme slate
+hi Normal guibg=NONE ctermbg=NONE
 
 " interface
 set wildmode=longest:full,full

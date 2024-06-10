@@ -1,9 +1,9 @@
 {
-    "workbench.colorTheme": "Andromeda Italic",
     "files.autoSave": "afterDelay",
     "editor.cursorStyle": "block",
     "editor.cursorBlinking": "expand",
     "editor.cursorSmoothCaretAnimation": "on",
+    "editor.fontFamily": "SF Mono Nerd Font, Menlo, Monaco, 'Courier New', monospace",1
     "workbench.statusBar.visible": false,
     "editor.minimap.enabled": false,
     "breadcrumbs.enabled": false,
@@ -70,5 +70,8 @@
     "window.titleBarStyle": "custom",
     "accessibility.signals.progress": {
         "sound": "off"
-    }
+    },
+    "workbench.colorTheme": "Monokai Pirokai - Arctic Frost",
+    "vscode_vibrancy.theme": "Dark (Only Subbar)",
+    "vscode_vibrancy.opacity": 0
 }

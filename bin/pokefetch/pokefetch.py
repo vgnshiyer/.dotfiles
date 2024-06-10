@@ -5,6 +5,7 @@ import json
 import os
 import random
 import sys
+import subprocess
 
 PROGRAM = os.path.realpath(__file__)
 PROGRAM_DIR = os.path.dirname(PROGRAM)
@@ -13,10 +14,9 @@ COLORSCRIPTS_DIR = f"{PROGRAM_DIR}/colorscripts"
 REGULAR_SUBDIR = "regular"
 SHINY_SUBDIR = "shiny"
 
-LARGE_SUBDIR = "large"
 SMALL_SUBDIR = "small"
 
-SHINY_RATE = 1 / 128
+SHINY_RATE = 1 / 32
 GENERATIONS = {
     "1": (1, 151),
     "2": (152, 251),
@@ -33,7 +33,7 @@ def print_file(filepath: str) -> None:
     with open(filepath, "r") as f:
         content = f.read()
         print("")
-        print(content.rstrip('\n').rstrip('\r').lstrip('\n').lstrip('\r'))
+        print(content)
 
 
 def list_pokemon_names() -> None:
@@ -76,10 +76,11 @@ def show_pokemon_by_name(
                 sys.exit(1)
     pokemon_file = f"{base_path}/{size_subdir}/{color_subdir}/{name}"
     
+    neofetch_output = subprocess.run("neofetch", shell=True, capture_output=True, text=True).stdout
     print_file(pokemon_file)
-    if show_title:
-        print(f"🦊 -> {name}")
-    
+    print(f"🦊 -> {name}")
+    print(neofetch_output, end="")
+
 
 def show_random_pokemon(
     generations: str, show_title: bool, shiny: bool 
