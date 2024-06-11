@@ -15,5 +15,19 @@
     {
         "key": "cmd+k z",
         "command": "-workbench.action.toggleZenMode"
+    },
+    {
+        "key": "alt+[arrowLeft]",
+        "command": "workbench.action.decreaseViewSize",
+        "when": "sideBarFocus && filesExplorerFocus"
+    },
+    {
+        "key": "alt+[arrowRight]",
+        "command": "workbench.action.increaseViewSize",
+        "when": "sideBarFocus && filesExplorerFocus"
+    },
+    {
+        "key": "ctrl+alt+s",
+        "command": "workbench.action.toggleStatusbarVisibility",
     }
 ]
