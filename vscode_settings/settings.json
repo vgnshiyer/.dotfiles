@@ -3,14 +3,13 @@
     "editor.cursorStyle": "block",
     "editor.cursorBlinking": "expand",
     "editor.cursorSmoothCaretAnimation": "on",
-    "editor.fontFamily": "SF Mono Nerd Font, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontFamily": "Iosevka, SF Mono Nerd Font, monospace",
     "editor.minimap.enabled": false,
     "breadcrumbs.enabled": false,
     "liveshare.accessibility.soundsEnabled": false,
     "github.copilot.enable": {
-        "*": true,
+        "*": false,
         "plaintext": false,
-        "markdown": false,
         "scminput": false
     },
     "[javascriptreact]": {
