@@ -29,31 +29,29 @@ function zet
 
     if test -f $filename_inbox
         echo "File already exists"
-        code $filename_inbox
+        vim $filename_inbox
     else if test -f $filename_inbox_pvt
         echo "File already exists"
-        code $filename_inbox_pvt
+        vim $filename_inbox_pvt
     else if test -f $filename_zettel
         echo "File already exists"
-        code $filename_zettel
+        vim $filename_zettel
     else if test -f $filename_zettel_pvt
         echo "file already exists"
-        code $filename_zettel_pvt
+        vim $filename_zettel_pvt
     else
         if test $private_mode -eq 1
             echo "Created on $todays_date" > $filename_inbox_pvt
             cat $zettel_template_dir >> $filename_inbox_pvt
 
-            code $filename_inbox_pvt
+            vim $filename_inbox_pvt
         else
             echo "Created on $todays_date" > $filename_inbox
             cat $zettel_template_dir >> $filename_inbox
             
-            code $filename_inbox
+            vim $filename_inbox
         end
     end
 end
-
-
 
 

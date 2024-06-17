@@ -144,4 +144,4 @@ ln -s /Users/vgnshiyer/.dotfiles/vscode_settings/keybindings.json /Users/vgnshiy
 ```bash
 sudo ln -s ~/.dotfiles/bin/pokefetech/pokefetch.py /usr/local/bin/pokefetch
 ```
-2. Add them to your fish config (or zshrc) (here)[https://github.com/vgnshiyer/.dotfiles/blob/main/.config/fish/config.fish].
+2. Add them to your fish config (or zshrc) [here](https://github.com/vgnshiyer/.dotfiles/blob/main/.config/fish/config.fish).
