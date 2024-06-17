@@ -1,5 +1,7 @@
 # vgnshiyer's dotfiles
 
+<img width="1470" alt="Screenshot 2024-06-17 at 8 33 20 AM" src="https://github.com/vgnshiyer/.dotfiles/assets/39982819/369252ee-1af6-491e-b6e3-fafc05fb1c6d">
+
 ## 1. Devices
 
 **Primary**
@@ -142,3 +144,4 @@ ln -s /Users/vgnshiyer/.dotfiles/vscode_settings/keybindings.json /Users/vgnshiy
 ```bash
 sudo ln -s ~/.dotfiles/bin/pokefetech/pokefetch.py /usr/local/bin/pokefetch
 ```
+2. Add them to your fish config (or zshrc) (here)[https://github.com/vgnshiyer/.dotfiles/blob/main/.config/fish/config.fish].
