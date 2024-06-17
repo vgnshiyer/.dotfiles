@@ -33,3 +33,5 @@ alias nv nvim
 ## Required for setting up mysql8.0 and python mysqlclient
 set -gx PATH /usr/local/mysql/bin $PATH
 export DYLD_LIBRARY_PATH="/usr/local/mysql/lib" 
+
+alias ls="eza --icons=always --color=always"
