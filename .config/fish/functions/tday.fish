@@ -10,10 +10,10 @@ function tday
 
     if test -f $filename
         echo "Today's note already exists. Opening it."
-        code $filename
+        vim $filename
         return
     end
 
     cp $template_file $filename
-    code $filename
+    vim $filename
 end
