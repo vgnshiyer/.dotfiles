@@ -16,6 +16,12 @@ set wrap
 set linebreak
 set clipboard=unnamedplus
 set backspace=indent,eol,start
+set clipboard=unnamed
+
+let mapleader = ","
+nnoremap <silent> <leader>f :nohlsearch<CR>
+nnoremap 0 $
+nnoremap 9 0
 
 " pluggins
 call plug#begin()
@@ -26,12 +32,19 @@ call plug#begin()
     " theme pluggins
     Plug 'catppuccin/vim', { 'as': 'catppuccin' }
     Plug 'itchyny/lightline.vim'
+
+    " file manager
+    Plug 'preservim/nerdtree'
+    Plug 'Xuyuanp/nerdtree-git-plugin' 
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " visual
 " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
 colorscheme catppuccin_mocha 
 let g:lightline = {'colorscheme': 'catppuccin_mocha'}
+hi Normal guibg=NONE ctermbg=NONE
 
 " interface
 set wildmode=longest:full,full
@@ -60,9 +73,19 @@ function! s:on_lsp_buffer_enabled() abort
     nmap <buffer> [g <plug>(lsp-previous-diagnostic) " Go to previous diagnostic
     nmap <buffer> ]g <plug>(lsp-next-diagnostic)     " Go to next diagnostic
     nmap <buffer> K <plug>(lsp-hover)                " Show hover information
+
+    " Set up insert mode binding for autocomplete
+    inoremap <Buffer> <C-Space> <C-x> <C-o>
 endfunction
 
 augroup lsp_install
     au!
     autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
+
+" file explorer
+nnoremap <C-n> :NERDTreeToggle<CR>
+let NERDTreeMapActivateNode='<space>'
+let NERDTreeMinimalUI=1
+nnoremap <C-f> :Files<cr>
+nnoremap <C-g> :Rg<cr>
