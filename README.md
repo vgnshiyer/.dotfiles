@@ -138,6 +138,8 @@ ln -s /Users/vgnshiyer/.dotfiles/vscode_settings/settings.json /Users/vgnshiyer/
 ln -s /Users/vgnshiyer/.dotfiles/vscode_settings/keybindings.json /Users/vgnshiyer/Library/Application\ Support/Code/User/keybindings.json
 ```
 
+2. I use vim also. Replicate my vim setup with my `.vimrc` file.
+
 ## 3 Bonus 
 
 1. Add pokefetch to your terminal session (Display a random pokemon along with system info to your terminal)
@@ -145,3 +147,8 @@ ln -s /Users/vgnshiyer/.dotfiles/vscode_settings/keybindings.json /Users/vgnshiy
 sudo ln -s ~/.dotfiles/bin/pokefetech/pokefetch.py /usr/local/bin/pokefetch
 ```
 2. Add them to your fish config (or zshrc) [here](https://github.com/vgnshiyer/.dotfiles/blob/main/.config/fish/config.fish).
+
+3. **Notetaking:** I have commands `zet`, `tday` and `sb` for my notetaking workflow which is integrated with Obsidian for cross-platform access.
+- `zet` --> opens a quick note with my default template.
+- `tday` --> opens today's daily note.
+- `sb` --> this command opens my second-brain directory which consists of all my notes. Find it [here](https://github.com/vgnshiyer/second-brain)
