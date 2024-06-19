@@ -16,10 +16,24 @@ set wrap
 set linebreak
 set clipboard=unnamedplus
 set backspace=indent,eol,start
+set termguicolors
+set noshowmode
+
+" pluggins
+call plug#begin()
+    " lsp plugins
+    Plug 'prabirshrestha/vim-lsp'
+    Plug 'mattn/vim-lsp-settings'
+
+    " theme pluggins
+    Plug 'catppuccin/vim', { 'as': 'catppuccin' }
+    Plug 'itchyny/lightline.vim'
+call plug#end()
 
 " visual
-colorscheme slate
-hi Normal guibg=NONE ctermbg=NONE
+" catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
+colorscheme catppuccin_mocha 
+let g:lightline = {'colorscheme': 'catppuccin_mocha'}
 
 " interface
 set wildmode=longest:full,full
@@ -31,12 +45,6 @@ set lazyredraw
 set updatetime=300
 set timeoutlen=500
 
-call plug#begin()
-
-Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
-
-call plug#end()
 
 function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
