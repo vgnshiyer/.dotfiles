@@ -13,6 +13,7 @@ Tools:
  - Arc Browser
  - AdBlock
  - Vimium (operate links with keyboard)
+ - Maccy (clipboard manager)
 
 **Secondary**
 Device: Ipad 9

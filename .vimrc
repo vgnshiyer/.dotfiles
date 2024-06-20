@@ -89,3 +89,8 @@ let NERDTreeMapActivateNode='<space>'
 let NERDTreeMinimalUI=1
 nnoremap <C-f> :Files<cr>
 nnoremap <C-g> :Rg<cr>
+
+command! -bang -nargs=* Rg
+    \ call fzf#vim#grep(
+    \   'rg --column --line-number --no-heading --color=always --smart-case --no-ignore '.shellescape(<q-args>), 1,
+    \   fzf#vim#with_preview()), <bang>0)

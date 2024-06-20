@@ -36,3 +36,4 @@ export DYLD_LIBRARY_PATH="/usr/local/mysql/lib"
 
 alias ls="eza --icons=always --color=always"
 alias cl="clear"
+alias cd="z"

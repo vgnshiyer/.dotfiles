@@ -9,7 +9,9 @@
 
 # fzf --fish | source
 
-set -Ux FZF_DEFAULT_COMMAND "fd -H -E '.git'"
+# set -Ux FZF_DEFAULT_COMMAND "fd -H -E '.git'"
+set -Ux FZF_DEFAULT_COMMAND "rg --files --hidden --no-ignore"
+
 
 set -Ux FZF_DEFAULT_OPTS "\
 --ansi \
