@@ -59,7 +59,8 @@ set noshowmode
 " performance
 set lazyredraw
 set updatetime=300
-set timeoutlen=500
+set ttimeout
+set timeoutlen=1000 ttimeoutlen=0
 
 " lsp-config
 function! s:on_lsp_buffer_enabled() abort
