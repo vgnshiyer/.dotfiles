@@ -139,7 +139,15 @@ ln -s /Users/vgnshiyer/.dotfiles/vscode_settings/settings.json /Users/vgnshiyer/
 ln -s /Users/vgnshiyer/.dotfiles/vscode_settings/keybindings.json /Users/vgnshiyer/Library/Application\ Support/Code/User/keybindings.json
 ```
 
-2. I use vim also. Replicate my vim setup with my `.vimrc` file.
+2. I use vim also. Replicate my vim setup with my `.vimrc` file. Install vim-plug as the plugin manager for vim.
+```bash
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+3. Open `.vimrc` and type the command `:PlugInstall`.
+
+4. **Installing language servers:** When opening a new file, type `:LspInstallServer`. This installs the appropriate language server for the filetype.
 
 ## 3 Bonus 
 
