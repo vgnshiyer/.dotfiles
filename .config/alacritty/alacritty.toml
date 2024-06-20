@@ -22,9 +22,12 @@ opacity = 0.85
 x = 18
 y = 16
 
-# Key Bindings
+# Custom Key Bindings -- MacOS specific
 
 # Reference: https://medium.com/@jogarcia/alacritty-with-tmux-escape-sequence-for-custom-binding-47df5e401c51
+
+######################## tmux key bindings #######################
+
 # open new tmux window
 [[keyboard.bindings]]
 chars = "\uE000"
@@ -65,15 +68,15 @@ mods = "Command|Shift"
 [[keyboard.bindings]]
 chars = "\uE113"
 key = "Right"
-mods = "Command|alt"
+mods = "Command|Alt"
 
 # switch to previous window
 [[keyboard.bindings]]
 chars = "\uE114"
 key = "Left"
-mods = "Command|alt"
+mods = "Command|Alt"
 
-# select tmux windows
+# select tmux windows by window number
 [[keyboard.bindings]]
 chars = "\uE004"
 key = "1"
@@ -117,4 +120,70 @@ mods = "Command"
 [[keyboard.bindings]]
 chars = "\uE012"
 key = "9"
+mods = "Command"
+
+# resize vertical split pane
+[[keyboard.bindings]]
+chars = "\uE022"
+key = "Up"
+mods = "Command|Control"
+
+[[keyboard.bindings]]
+chars = "\uE023"
+key = "Down"
+mods = "Command|Control"
+
+# resize horizontal split pane
+[[keyboard.bindings]]
+chars = "\uE024"
+key = "Left"
+mods = "Command|Control"
+
+[[keyboard.bindings]]
+chars = "\uE025"
+key = "Right"
+mods = "Command|Control"
+
+######################## Vim key bindings #######################
+
+# switch focus between buffers 
+[[keyboard.bindings]]
+chars = "\uE015"
+key = "E"
+mods = "Command|Shift"
+
+# toggle nerdtree (file explorer)
+[[keyboard.bindings]]
+chars = "\uE016"
+key = "B"
+mods = "Command"
+
+# fuzzy find files
+[[keyboard.bindings]]
+chars = "\uE017"
+key = "P"
+mods = "Command"
+
+# live grep from files
+[[keyboard.bindings]]
+chars = "\uE018"
+key = "F"
+mods = "Command|Shift"
+
+# text search
+[[keyboard.bindings]]
+chars = "\uE019"
+key = "F"
+mods = "Command"
+
+# Home key
+[[keyboard.bindings]]
+chars = "\uE020"
+key = "Left"
+mods = "Command"
+
+# End key 
+[[keyboard.bindings]]
+chars = "\uE021"
+key = "Right"
 mods = "Command"

@@ -19,15 +19,13 @@ set backspace=indent,eol,start
 set clipboard=unnamed
 
 let mapleader = ","
-nnoremap <silent> <leader>f :nohlsearch<CR>
-nnoremap 0 $
-nnoremap 9 0
 
 " pluggins
 call plug#begin()
-    " lsp plugins
+    " code plugins 
     Plug 'prabirshrestha/vim-lsp'
     Plug 'mattn/vim-lsp-settings'
+    Plug 'scrooloose/nerdcommenter'
 
     " theme pluggins
     Plug 'catppuccin/vim', { 'as': 'catppuccin' }
@@ -36,6 +34,11 @@ call plug#begin()
     " file manager
     Plug 'preservim/nerdtree'
     Plug 'Xuyuanp/nerdtree-git-plugin' 
+    Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+    Plug 'ryanoasis/vim-devicons'
+    Plug 'airblade/vim-gitgutter'
+
+    " file search
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
 call plug#end()
@@ -84,13 +87,21 @@ augroup lsp_install
 augroup END
 
 " file explorer
-nnoremap <C-n> :NERDTreeToggle<CR>
 let NERDTreeMapActivateNode='<space>'
 let NERDTreeMinimalUI=1
-nnoremap <C-f> :Files<cr>
-nnoremap <C-g> :Rg<cr>
 
+" Custom key bindings
 command! -bang -nargs=* Rg
     \ call fzf#vim#grep(
     \   'rg --column --line-number --no-heading --color=always --smart-case --no-ignore '.shellescape(<q-args>), 1,
     \   fzf#vim#with_preview()), <bang>0)
+
+nnoremap  :NERDTreeToggle<CR> " toggle file explorer (Cmd + b)
+nnoremap  <C-w>w
+nnoremap  :Files<CR>
+nnoremap  :Rg<CR> " live grep files (Cmd + Shift + f)
+nnoremap  /
+nnoremap <leader><Esc> :nohlsearch<CR>:redraw!<CR>
+nnoremap  $
+nnoremap  0
+
