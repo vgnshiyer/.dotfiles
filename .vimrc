@@ -115,6 +115,6 @@ vnoremap  $
 nnoremap  0
 vnoremap  0
 " comment a line
-nmap  <Plug>NERDCommenterComment
-vmap  <Plug>NERDCommenterComment
+nmap  <Plug>NERDCommenterToggle
+vmap  <Plug>NERDCommenterToggle
 
