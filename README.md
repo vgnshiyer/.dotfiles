@@ -1,8 +1,9 @@
 # vgnshiyer's dotfiles
 
 <img width="1470" alt="Screenshot 2024-06-17 at 8 33 20 AM" src="https://github.com/vgnshiyer/.dotfiles/assets/39982819/369252ee-1af6-491e-b6e3-fafc05fb1c6d">
-<img width="1440" alt="Screenshot 2024-06-19 at 8 37 12 PM" src="https://github.com/vgnshiyer/.dotfiles/assets/39982819/e1b7d241-9f98-470e-a7ae-40ee1dd24078">
-<img width="1440" alt="Screenshot 2024-06-19 at 8 41 34 PM" src="https://github.com/vgnshiyer/.dotfiles/assets/39982819/e70582f2-ee55-4953-8a28-93242d1b5286">
+<img width="1470" alt="Screenshot 2024-06-20 at 4 14 36 PM" src="https://github.com/vgnshiyer/.dotfiles/assets/39982819/5fc2d4b3-4920-4117-8ee1-54d4edebb84f">
+<img width="1470" alt="Screenshot 2024-06-20 at 5 34 14 PM" src="https://github.com/vgnshiyer/.dotfiles/assets/39982819/0ed9a5e2-10cb-4ef2-9405-2e74eb90e5bc">
+
 
 ## 1. Devices
 
