@@ -25,7 +25,7 @@ call plug#begin()
     " code plugins 
     Plug 'prabirshrestha/vim-lsp'
     Plug 'mattn/vim-lsp-settings'
-    Plug 'scrooloose/nerdcommenter'
+    Plug 'preservim/nerdcommenter'
 
     " theme pluggins
     Plug 'catppuccin/vim', { 'as': 'catppuccin' }
@@ -55,6 +55,7 @@ set showtabline=2
 set laststatus=2
 set termguicolors
 set noshowmode
+let g:NERDSpaceDelims = 1
 
 " performance
 set lazyredraw
@@ -91,18 +92,29 @@ augroup END
 let NERDTreeMapActivateNode='<space>'
 let NERDTreeMinimalUI=1
 
-" Custom key bindings
 command! -bang -nargs=* Rg
     \ call fzf#vim#grep(
     \   'rg --column --line-number --no-heading --color=always --smart-case --no-ignore '.shellescape(<q-args>), 1,
     \   fzf#vim#with_preview()), <bang>0)
 
+
+" Custom key bindings
+
+" file explorer binds
 nnoremap  :NERDTreeToggle<CR> " toggle file explorer (Cmd + b)
 nnoremap  <C-w>w
 nnoremap  :Files<CR>
 nnoremap  :Rg<CR> " live grep files (Cmd + Shift + f)
+" text search
 nnoremap  /
 nnoremap <leader><Esc> :nohlsearch<CR>:redraw!<CR>
+" end of line
 nnoremap  $
+vnoremap  $
+" start fof line
 nnoremap  0
+vnoremap  0
+" comment a line
+nmap  <Plug>NERDCommenterComment
+vmap  <Plug>NERDCommenterComment
 

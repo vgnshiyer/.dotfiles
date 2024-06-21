@@ -4,7 +4,7 @@ import argparse
 import os.path
 import tzlocal
 from typing import Any
-from datetime import datetime
+from datetime import datetime, timedelta
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
@@ -14,6 +14,8 @@ from googleapiclient.errors import HttpError
 parser = argparse.ArgumentParser(description='TodoCal')
 parser.add_argument('task_name', type=str,
                     help='Name of the task to add to the calendar')
+parser.add_argument('--tomorrow', action='store_true',
+                    help='Add task to tomorrow\'s calendar')
 
 
 PROGRAM = os.path.realpath(__file__)
@@ -58,10 +60,14 @@ def get_credentials():
     return creds
 
 
-def create_todo_event(service: Any, task_name: str):
-    print(f'Creating event with name: {task_name}')
+def create_todo_event(service: Any, task_name: str, is_tomorrow: bool):
+    print(f'Creating task with name: {task_name}')
 
-    today = datetime.now().date().isoformat()
+    today = datetime.now().date()
+
+    if is_tomorrow:
+        today += timedelta(days=1)
+    today = today.isoformat()
     timezone = tzlocal.get_localzone_name()
 
     event_template["summary"] = task_name
@@ -73,7 +79,7 @@ def create_todo_event(service: Any, task_name: str):
     try:
         created_event = service.events().insert(
                 calendarId="primary", body=event_template).execute()
-        print(f"Event created: {created_event.get('htmlLink', '')}")
+        print(f"Task created: {created_event.get('htmlLink', '')}")
     except HttpError as e:
         print(f"An error occurred: {e}")
 
@@ -81,11 +87,12 @@ def create_todo_event(service: Any, task_name: str):
 def main():
     args = parser.parse_args()
     task_name = args.task_name
+    is_tomorrow = args.tomorrow
 
     creds = get_credentials()
     service = build("calendar", "v3", credentials=creds)
 
-    create_todo_event(service, task_name)
+    create_todo_event(service, task_name, is_tomorrow)
 
 
 if __name__ == "__main__":
