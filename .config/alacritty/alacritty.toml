@@ -176,20 +176,9 @@ chars = "\uE019"
 key = "F"
 mods = "Command"
 
-# Home key
-[[keyboard.bindings]]
-chars = "\uE020"
-key = "Left"
-mods = "Command"
-
-# End key 
-[[keyboard.bindings]]
-chars = "\uE021"
-key = "Right"
-mods = "Command"
-
 # commend a line
 [[keyboard.bindings]]
 chars = "\uE026"
 key = "/"
 mods = "Command"
+
