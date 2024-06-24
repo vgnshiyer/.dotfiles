@@ -97,7 +97,6 @@ command! -bang -nargs=* Rg
     \   'rg --column --line-number --no-heading --color=always --smart-case --no-ignore '.shellescape(<q-args>), 1,
     \   fzf#vim#with_preview()), <bang>0)
 
-
 " Custom key bindings
 
 " file explorer binds
