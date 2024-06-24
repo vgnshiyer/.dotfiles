@@ -1,6 +1,6 @@
 # credits: https://github.com/joshmedeski/dotfiles/blob/main/.config/fish/functions/lfcd.fish
 
-function lfcd
+function lf
     set tmp (mktemp)
     lf -last-dir-path=$tmp $argv
     if test -f "$tmp"
