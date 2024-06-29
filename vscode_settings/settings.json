@@ -89,6 +89,24 @@
             "commands": [
                 "editor.action.outdentLines"
             ]
+        },
+        {
+            "before": ["0"],
+            "after": ["$"]
+        },
+        {
+            "before": ["9"],
+            "after": ["^"] 
+        }
+    ],
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["0"],
+            "after": ["$"]
+        },
+        {
+            "before": ["9"],
+            "after": ["^"]
         }
     ],
     "workbench.statusBar.visible": false
