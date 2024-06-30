@@ -25,7 +25,6 @@ if not string match -rq fzf $parent
 end
 
 # Aliases
-alias nv nvim
 
 # Custom cron job to sync second brain in iCloud-Mobile drive
 # crontab -l | grep -v sync_sb | begin; cat; echo "0 * * * * /opt/homebrew/bin/fish -c 'sync_sb'"; end | crontab -
@@ -37,3 +36,6 @@ export DYLD_LIBRARY_PATH="/usr/local/mysql/lib"
 alias ls="eza --icons=always --color=always"
 alias cl="clear"
 alias cd="z"
+
+# work specific (wont necessarily work on other machines)
+alias nvrvim="rvim svcenomis"
