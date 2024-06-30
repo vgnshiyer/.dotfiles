@@ -26,6 +26,7 @@ call plug#begin()
     Plug 'prabirshrestha/vim-lsp'
     Plug 'mattn/vim-lsp-settings'
     Plug 'preservim/nerdcommenter'
+    Plug 'github/copilot.vim'
 
     " theme pluggins
     Plug 'catppuccin/vim', { 'as': 'catppuccin' }
@@ -41,6 +42,7 @@ call plug#begin()
     " file search
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
 " visual
