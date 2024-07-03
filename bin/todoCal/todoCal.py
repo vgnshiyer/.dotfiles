@@ -46,7 +46,15 @@ def get_credentials():
 
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
-            creds.refresh(Request())
+            try:
+                creds.refresh(Request())
+            except Exception as e:
+                print(f"Unknown error: {e}")
+                flow = InstalledAppFlow.from_client_secrets_file(
+                        credentials_path,
+                        SCOPES
+                )
+                creds = flow.run_local_server(port=0)
         else:
             flow = InstalledAppFlow.from_client_secrets_file(
                     credentials_path,
