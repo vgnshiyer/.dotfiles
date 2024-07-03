@@ -49,5 +49,6 @@ yabai -m rule --add app="Raycast" manage=off
 yabai -m rule --add app="^Music$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Books$" manage=off
+yabai -m rule --add app="^Photo Booth$" manage=off
 
 echo "yabai configuration loaded.."
