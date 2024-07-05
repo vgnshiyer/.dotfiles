@@ -102,7 +102,15 @@ command! -bang -nargs=* Rg
 " Custom key bindings
 
 " file explorer binds
-nnoremap  :NERDTreeToggle<CR> " toggle file explorer (Cmd + b)
+function! ToggleNERDTree()
+    if &filetype == 'nerdtree'
+        NERDTreeClose
+    else
+        NERDTreeFind
+    endif
+endfunction
+
+nnoremap <silent>  :call ToggleNERDTree()<CR> " toggle file explorer (Cmd + b)
 nnoremap  <C-w>w
 nnoremap  :Files<CR>
 nnoremap  :Rg<CR> " live grep files (Cmd + Shift + f)
