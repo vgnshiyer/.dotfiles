@@ -152,6 +152,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 4. **Installing language servers:** When opening a new file, type `:LspInstallServer`. This installs the appropriate language server for the filetype.
 
+**Note:** Do not add `.vim/` to source control. Vim-plug manages updates to plugins in the `.vim/plugged/` directory via git.
+
 ## 3 Bonus 
 
 1. Add pokefetch to your terminal session (Display a random pokemon along with system info to your terminal)
