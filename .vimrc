@@ -117,6 +117,7 @@ nnoremap  :Rg<CR> " live grep files (Cmd + Shift + f)
 " text search
 nnoremap  /
 nnoremap <leader><Esc> :nohlsearch<CR>:redraw!<CR>
+
 " end of line
 nnoremap 0 $
 vnoremap 0 $

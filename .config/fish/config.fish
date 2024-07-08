@@ -36,6 +36,7 @@ export DYLD_LIBRARY_PATH="/usr/local/mysql/lib"
 alias ls="eza --icons=always --color=always"
 alias cl="clear"
 alias cd="z"
+alias nv="nvim"
 
 # work specific (wont necessarily work on other machines)
 alias nvrvim="rvim svcenomis"
