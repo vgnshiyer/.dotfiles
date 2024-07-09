@@ -70,20 +70,21 @@ def show_pokemon_by_name(
                 if not alternate_forms:
                     print(f"No alternate forms available for {name}")
                 else:
-                    print(f"Available alternate forms are")
+                    print("Available alternate forms are")
                     for form in alternate_forms:
                         print(f"- {form}")
                 sys.exit(1)
     pokemon_file = f"{base_path}/{size_subdir}/{color_subdir}/{name}"
-    
-    neofetch_output = subprocess.run("neofetch", shell=True, capture_output=True, text=True).stdout
+
+    neofetch_output = subprocess.run("neofetch", shell=True,
+                                     capture_output=True, text=True).stdout
     print_file(pokemon_file)
     print(f"🦊 -> {name}")
     print(neofetch_output, end="")
 
 
 def show_random_pokemon(
-    generations: str, show_title: bool, shiny: bool 
+    generations: str, show_title: bool, shiny: bool
 ) -> None:
     # Generation list
     if len(generations.split(",")) > 1:
@@ -135,7 +136,8 @@ def main() -> None:
         "--name",
         type=str,
         help="""Select pokemon by name. Generally spelled like in the games.
-                a few exceptions are nidoran-f, nidoran-m, mr-mime, farfetchd, flabebe
+                a few exceptions are nidoran-f, nidoran-m, mr-mime, farfetchd,
+                flabebe
                 type-null etc. Perhaps grep the output of --list if in
                 doubt.""",
     )

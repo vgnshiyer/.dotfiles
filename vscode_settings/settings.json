@@ -70,7 +70,7 @@
     "accessibility.signals.progress": {
         "sound": "off"
     },
-    "workbench.colorTheme": "Alt Catppuccin Mocha",
+    "workbench.colorTheme": "Alt Catppuccin Macchiato",
     "vscode_vibrancy.theme": "Dark (Only Subbar)",
     "vscode_vibrancy.opacity": 0,
     "vim.visualModeKeyBindings": [
