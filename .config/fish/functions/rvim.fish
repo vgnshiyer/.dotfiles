@@ -16,5 +16,5 @@ function rvim
         return 1
     end
 
-    nvim scp://$user@$host///$file
+    vim scp://$user@$host///$file
 end

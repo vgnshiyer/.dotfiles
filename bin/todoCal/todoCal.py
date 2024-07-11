@@ -49,7 +49,7 @@ def get_credentials():
             try:
                 creds.refresh(Request())
             except Exception as e:
-                print(f"Unknown error: {e}")
+                print("Refresh token expired.")
                 flow = InstalledAppFlow.from_client_secrets_file(
                         credentials_path,
                         SCOPES

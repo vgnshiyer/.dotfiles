@@ -1,3 +1,3 @@
 function vf
-    nvim "$(fzf)"
+    vim "$(fzf)"
 end
