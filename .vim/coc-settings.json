@@ -1,6 +1,9 @@
 {
-  "python.linting.pylintEnabled": true,
-  "python.linting.flake8Enabled": false,
-  "python.linting.enabled": true,
-  "python.linting.pep8Enabled": false
+    "python.linting.pylintEnabled": true,
+    "python.linting.flake8Enabled": false,
+    "python.linting.enabled": true,
+    "python.linting.pep8Enabled": false,
+    "https.rejectUnauthorized": false,
+    "http.proxyStrictSSL": false,
+    "snippets.ultisnips.pythonPrompt": false,
 }

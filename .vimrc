@@ -23,8 +23,7 @@ let mapleader = ","
 " pluggins
 call plug#begin()
     " code plugins 
-    Plug 'prabirshrestha/vim-lsp'
-    Plug 'mattn/vim-lsp-settings'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'preservim/nerdcommenter'
     Plug 'github/copilot.vim'
 
@@ -66,29 +65,64 @@ set ttimeout
 set timeoutlen=1000 ttimeoutlen=0
 
 " lsp-config
-function! s:on_lsp_buffer_enabled() abort
-    setlocal omnifunc=lsp#complete
-    setlocal signcolumn=yes
-    if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
-    nmap <buffer> gd <plug>(lsp-definition)          " Go to definition
-    nmap <buffer> gs <plug>(lsp-document-symbol-search) " Search document symbols
-    nmap <buffer> gS <plug>(lsp-workspace-symbol-search) " Search workspace symbols
-    nmap <buffer> gr <plug>(lsp-references)          " Find references
-    nmap <buffer> gi <plug>(lsp-implementation)      " Go to implementation
-    nmap <buffer> gt <plug>(lsp-type-definition)     " Go to type definition
-    nmap <buffer> <leader>rn <plug>(lsp-rename)      " Rename symbol
-    nmap <buffer> [g <plug>(lsp-previous-diagnostic) " Go to previous diagnostic
-    nmap <buffer> ]g <plug>(lsp-next-diagnostic)     " Go to next diagnostic
-    nmap <buffer> K <plug>(lsp-hover)                " Show hover information
+let g:coc_global_extensions = [
+    \ 'coc-tsserver',
+    \ 'coc-json',
+    \ 'coc-html',
+    \ 'coc-css',
+    \ 'coc-yaml',
+    \ '@yaegassy/coc-pylsp',
+    \ 'coc-vetur',
+    \ 'coc-rls',
+    \ 'coc-snippets',
+    \ 'coc-highlight',
+    \ 'coc-explorer',
+    \ 'coc-prettier',
+    \ 'coc-eslint',
+    \ 'coc-git',
+    \ 'coc-rust-analyzer',
+    \ 'coc-vimlsp',
+    \ 'coc-pairs',
+    \ ]
 
-    " Set up insert mode binding for autocomplete
-    inoremap <Buffer> <C-Space> <C-x> <C-o>
+" tab to trigger completion
+" Make <CR> to accept selected completion item or notify coc.nvim to format
+" <C-g>u breaks current undo, please make your own choice
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
+
+" GoTo code navigation
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Highlight the symbol and its references when holding the cursor
+autocmd CursorHold * silent call CocActionAsync('highlight')
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+" Formatting selected code
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
+" Use K to show documentation in preview window
+nnoremap <silent> K :call ShowDocumentation()<CR>
+
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
 endfunction
 
-augroup lsp_install
-    au!
-    autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
-augroup END
+" Symbol renaming
+nmap <leader>rn <Plug>(coc-rename)
 
 " file explorer
 let NERDTreeMapActivateNode='<space>'

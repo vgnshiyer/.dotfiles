@@ -1,5 +1,0 @@
-{
-    "https.rejectUnauthorized": false,
-    "http.proxyStrictSSL": false,
-    "snippets.ultisnips.pythonPrompt": false
-}
