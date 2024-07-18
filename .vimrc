@@ -17,7 +17,6 @@ set linebreak
 set clipboard=unnamedplus
 set backspace=indent,eol,start
 set clipboard=unnamed
-set mouse=a
 
 let mapleader = ","
 
