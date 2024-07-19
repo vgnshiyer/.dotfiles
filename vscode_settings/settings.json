@@ -109,9 +109,11 @@
             "after": ["^"]
         }
     ],
+    "vim.useSystemClipboard": true,
     "workbench.statusBar.visible": false,
     "flake8.args": [
         "--max-line-length=120"
     ],
-    "opa.bundleMode": true
+    "opa.bundleMode": true,
+    "editor.lineNumbers": "relative"
 }

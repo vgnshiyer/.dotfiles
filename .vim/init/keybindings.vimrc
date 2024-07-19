@@ -35,3 +35,6 @@ vnoremap 9 0
 " comment a line
 nmap  <Plug>NERDCommenterToggle
 vmap  <Plug>NERDCommenterToggle
+
+" copy without losing previous clipboard
+xnoremap <leader>p "_dP"
