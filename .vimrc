@@ -35,7 +35,7 @@ source $HOME/.vim/init/keybindings.vimrc
 
 " visual
 " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
-colorscheme catppuccin_mocha 
+colorscheme catppuccin_mocha
 let g:lightline = {'colorscheme': 'catppuccin_mocha'}
 hi Normal guibg=NONE ctermbg=NONE
 
