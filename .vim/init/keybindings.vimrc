@@ -38,3 +38,7 @@ vmap  <Plug>NERDCommenterToggle
 
 " copy without losing previous clipboard
 xnoremap <leader>p "_dP"
+
+" move lines up and down and bring to center
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
