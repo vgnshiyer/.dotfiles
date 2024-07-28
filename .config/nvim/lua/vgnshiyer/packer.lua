@@ -50,4 +50,26 @@ return require('packer').startup(function(use)
             { 'L3MON4D3/LuaSnip' },
         }
     }
+
+    use {
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v3.x",
+        requires = {
+            "nvim-lua/plenary.nvim",
+            "nvim-tree/nvim-web-devicons",
+            "MunifTanjim/nui.nvim",
+            "3rd/image.nvim",
+        }
+    }
+
+    use 'github/copilot.vim'
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+            -- Set key mappings for Comment.nvim
+            vim.api.nvim_set_keymap('n', '<F19>', 'gcc', { noremap = false, silent = true })
+            vim.api.nvim_set_keymap('v', '<F19>', 'gc', { noremap = false, silent = true })
+        end
+    }
 end)
