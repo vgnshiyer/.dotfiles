@@ -181,3 +181,9 @@ chars = "\uE026"
 key = "/"
 mods = "Command"
 
+# commend a line
+[[keyboard.bindings]]
+chars = "\uE027"
+key = "K"
+mods = "Command"
+

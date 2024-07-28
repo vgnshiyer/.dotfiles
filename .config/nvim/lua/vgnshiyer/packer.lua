@@ -6,7 +6,7 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim',
         tag = '0.1.8',
         branch = '0.1.x',
-        requires = { {'nvim-lua/plenary.nvim'} }
+        requires = { { 'nvim-lua/plenary.nvim' } }
     }
     use {
         "rebelot/kanagawa.nvim",
@@ -15,7 +15,7 @@ return require('packer').startup(function(use)
                 undercurl = true,
                 commentStyle = { italic = true },
                 functionStyle = {},
-                keywordStyle = { italic = true},
+                keywordStyle = { italic = true },
                 statementStyle = { bold = true },
                 transparent = true,
                 theme = "dragon",
@@ -33,22 +33,21 @@ return require('packer').startup(function(use)
         end
     }
 
-    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
+    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('mbbill/undotree')
 
     use {
-	    'VonHeikemen/lsp-zero.nvim',
-	    branch = 'v3.x',
-	    requires = {
-		    {'williamboman/mason.nvim'},
-		    {'williamboman/mason-lspconfig.nvim'},
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v3.x',
+        requires = {
+            { 'williamboman/mason.nvim' },
+            { 'williamboman/mason-lspconfig.nvim' },
 
-		    {'saadparwaiz1/cmp_luasnip'},
-		    {'neovim/nvim-lspconfig'},
-		    {'hrsh7th/nvim-cmp'},
-		    {'hrsh7th/cmp-nvim-lsp'},
-		    {'L3MON4D3/LuaSnip'},
-	    }
+            { 'saadparwaiz1/cmp_luasnip' },
+            { 'neovim/nvim-lspconfig' },
+            { 'hrsh7th/nvim-cmp' },
+            { 'hrsh7th/cmp-nvim-lsp' },
+            { 'L3MON4D3/LuaSnip' },
+        }
     }
-
 end)

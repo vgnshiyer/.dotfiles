@@ -5,6 +5,7 @@ lsp_zero.on_attach(function(client, bufnr)
 
   -- overriding default keymaps
   vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', {buffer = bufnr})
+  vim.keymap.set('n', '<F20>', '<cmd>lua vim.lsp.buf.hover()<cr>', {buffer = bufnr})
 end)
 
 -- format on save

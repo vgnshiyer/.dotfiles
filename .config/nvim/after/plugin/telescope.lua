@@ -4,6 +4,5 @@ vim.keymap.set('n', '<F5>', builtin.live_grep, {})
 
 require('telescope').setup{
     defaults = {
-        winblend = 0,
     }
 }
