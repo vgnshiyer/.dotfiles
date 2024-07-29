@@ -181,9 +181,9 @@ chars = "\uE026"
 key = "/"
 mods = "Command"
 
-# commend a line
+# open copilot chat
 [[keyboard.bindings]]
 chars = "\uE027"
-key = "K"
-mods = "Command"
+key = "I"
+mods = "Command|Shift"
 

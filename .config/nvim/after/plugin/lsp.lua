@@ -3,7 +3,7 @@ local lsp_zero = require('lsp-zero')
 lsp_zero.on_attach(function(client, bufnr)
   lsp_zero.default_keymaps({buffer = bufnr})
 
-  -- overriding default keymaps
+  -- overriding default keymapslsp
   vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', {buffer = bufnr})
 end)
 
@@ -27,8 +27,8 @@ require('mason-lspconfig').setup({
   ensure_installed = {
 	  'tsserver',
 	  'rust_analyzer',
-	  'pylsp',
-	  'eslint'
+	  'eslint',
+      'pyright'
   },
   handlers = {
     function(server_name)
@@ -64,14 +64,3 @@ cmp.setup({
   }
 })
 
-vim.diagnostic.config({
-  virtual_text = true,
-  severity_sort = true,
-  float = {
-    style = 'minimal',
-    border = 'rounded',
-    source = 'always',
-    header = '',
-    prefix = '',
-  },
-})

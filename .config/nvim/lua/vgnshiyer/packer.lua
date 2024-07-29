@@ -2,12 +2,14 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
+
     use {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.8',
         branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
+
     use {
         "rebelot/kanagawa.nvim",
         config = function()
@@ -72,4 +74,17 @@ return require('packer').startup(function(use)
             vim.api.nvim_set_keymap('v', '<F19>', 'gc', { noremap = false, silent = true })
         end
     }
+
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
+
+    use {
+        'm4xshen/autoclose.nvim',
+        config = function()
+            require('autoclose').setup()
+        end
+    }
 end)
+
