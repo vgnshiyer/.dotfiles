@@ -13,30 +13,7 @@ return require('packer').startup(function(use)
     }
 
     -- colorscheme
-    use {
-        "rebelot/kanagawa.nvim",
-        config = function()
-            require('kanagawa').setup({
-                undercurl = true,
-                commentStyle = { italic = true },
-                functionStyle = {},
-                keywordStyle = { italic = true },
-                statementStyle = { bold = true },
-                transparent = true,
-                theme = "dragon",
-                colors = {
-                    theme = {
-                        all = {
-                            ui = {
-                                bg_gutter = "none",
-                            },
-                        },
-                    },
-                },
-            })
-            vim.cmd('colorscheme kanagawa')
-        end
-    }
+    use "rebelot/kanagawa.nvim"
 
     -- syntax highlighting
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })

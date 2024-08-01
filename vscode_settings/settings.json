@@ -3,8 +3,15 @@
     "editor.cursorStyle": "block",
     "editor.cursorBlinking": "expand",
     "editor.cursorSmoothCaretAnimation": "on",
-    "editor.fontFamily": "SF Mono Nerd Font, monospace",
+    "editor.fontFamily": "Zed Mono Extended",
+    "editor.fontSize": 13,
+    "editor.fontLigatures": true,
     "editor.minimap.enabled": false,
+    "apc.font.family": "Zed Mono Extended",
+    "apc.monospace.font.family": "Zed Mono Extended",
+    "apc.menubar.compact": true,
+    "vscode_custom_css.imports": ["file:///Users/viiyer/.dotfiles/vscode_settings/custom_workbench.css"],
+    "vscode_custom_css.statusbar": true,
     "breadcrumbs.enabled": false,
     "liveshare.accessibility.soundsEnabled": false,
     "github.copilot.enable": {
@@ -18,6 +25,7 @@
     },
     "workbench.iconTheme": "vscode-icons",
     "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "block",
     "explorer.confirmDelete": false,
     "zenMode.hideLineNumbers": false,
     "editor.accessibilitySupport": "off",
@@ -70,7 +78,6 @@
     "accessibility.signals.progress": {
         "sound": "off"
     },
-    "workbench.colorTheme": "Solarized Light",
     "vscode_vibrancy.theme": "Dark (Only Subbar)",
     "vscode_vibrancy.opacity": 0,
     "vim.visualModeKeyBindings": [
@@ -89,25 +96,9 @@
             "commands": [
                 "editor.action.outdentLines"
             ]
-        },
-        {
-            "before": ["0"],
-            "after": ["$"]
-        },
-        {
-            "before": ["9"],
-            "after": ["^"] 
         }
     ],
     "vim.normalModeKeyBindings": [
-        {
-            "before": ["0"],
-            "after": ["$"]
-        },
-        {
-            "before": ["9"],
-            "after": ["^"]
-        },
         {
             "before": ["<C-d>"],
             "after": ["<C-d>", "z", "z"]
@@ -123,5 +114,6 @@
     ],
     "opa.bundleMode": true,
     "editor.lineNumbers": "relative",
+    "workbench.colorTheme": "Ayu Mirage Zed",
     "workbench.statusBar.visible": false
 }

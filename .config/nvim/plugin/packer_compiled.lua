@@ -112,7 +112,6 @@ _G.packer_plugins = {
     url = "https://github.com/3rd/image.nvim"
   },
   ["kanagawa.nvim"] = {
-    config = { "\27LJ\2\nß\3\0\0\a\0\22\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0024\3\0\0=\3\6\0025\3\a\0=\3\b\0025\3\t\0=\3\n\0025\3\16\0005\4\14\0005\5\f\0005\6\v\0=\6\r\5=\5\15\4=\4\17\3=\3\18\2B\0\2\0016\0\19\0009\0\20\0'\2\21\0B\0\2\1K\0\1\0\25colorscheme kanagawa\bcmd\bvim\vcolors\ntheme\1\0\1\ntheme\0\ball\1\0\1\ball\0\aui\1\0\1\aui\0\1\0\1\14bg_gutter\tnone\19statementStyle\1\0\1\tbold\2\17keywordStyle\1\0\1\vitalic\2\18functionStyle\17commentStyle\1\0\1\vitalic\2\1\0\b\19statementStyle\0\16transparent\2\14undercurl\2\17commentStyle\0\18functionStyle\0\vcolors\0\17keywordStyle\0\ntheme\vdragon\nsetup\rkanagawa\frequire\0" },
     loaded = true,
     path = "/Users/viiyer/.local/share/nvim/site/pack/packer/start/kanagawa.nvim",
     url = "https://github.com/rebelot/kanagawa.nvim"
@@ -190,10 +189,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: kanagawa.nvim
-time([[Config for kanagawa.nvim]], true)
-try_loadstring("\27LJ\2\nß\3\0\0\a\0\22\0\0276\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\0024\3\0\0=\3\6\0025\3\a\0=\3\b\0025\3\t\0=\3\n\0025\3\16\0005\4\14\0005\5\f\0005\6\v\0=\6\r\5=\5\15\4=\4\17\3=\3\18\2B\0\2\0016\0\19\0009\0\20\0'\2\21\0B\0\2\1K\0\1\0\25colorscheme kanagawa\bcmd\bvim\vcolors\ntheme\1\0\1\ntheme\0\ball\1\0\1\ball\0\aui\1\0\1\aui\0\1\0\1\14bg_gutter\tnone\19statementStyle\1\0\1\tbold\2\17keywordStyle\1\0\1\vitalic\2\18functionStyle\17commentStyle\1\0\1\vitalic\2\1\0\b\19statementStyle\0\16transparent\2\14undercurl\2\17commentStyle\0\18functionStyle\0\vcolors\0\17keywordStyle\0\ntheme\vdragon\nsetup\rkanagawa\frequire\0", "config", "kanagawa.nvim")
-time([[Config for kanagawa.nvim]], false)
 -- Config for: Comment.nvim
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n∆\1\0\0\6\0\r\0\0226\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\0016\0\3\0009\0\4\0009\0\5\0'\2\6\0'\3\a\0'\4\b\0005\5\t\0B\0\5\0016\0\3\0009\0\4\0009\0\5\0'\2\n\0'\3\a\0'\4\v\0005\5\f\0B\0\5\1K\0\1\0\1\0\2\vsilent\2\fnoremap\1\agc\6v\1\0\2\vsilent\2\fnoremap\1\bgcc\n<F19>\6n\20nvim_set_keymap\bapi\bvim\nsetup\fComment\frequire\0", "config", "Comment.nvim")
