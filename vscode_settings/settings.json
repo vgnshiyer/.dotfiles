@@ -92,6 +92,14 @@
             "commands": [
                 "editor.action.outdentLines"
             ]
+        },
+        {
+            "before": ["J"],
+            "after": [":", "m", ">", "+", "1", "<CR>", "g", "v", "=", "g", "v"]
+        },
+        {
+            "before": ["K"],
+            "after": [":", "m", "<", "-", "2", "<CR>", "g", "v", "=", "g", "v"]
         }
     ],
     "vim.normalModeKeyBindings": [
@@ -102,6 +110,10 @@
         {
             "before": ["<C-u>"],
             "after": ["<C-u>", "z", "z"]
+        },
+        {
+            "before": ["J"],
+            "after": [":", "m", "z", "J", "`", "z"]
         }
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
