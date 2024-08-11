@@ -13,7 +13,7 @@
     "breadcrumbs.enabled": false,
     "liveshare.accessibility.soundsEnabled": false,
     "github.copilot.enable": {
-        "*": true,
+        "*": false,
         "plaintext": true,
         "markdown": true,
         "scminput": false
@@ -23,7 +23,9 @@
     },
     "workbench.iconTheme": "vscode-icons",
     "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.fontWeight": "bold",
     "terminal.integrated.cursorStyle": "block",
+    "terminal.integrated.fontSize": 13,
     "explorer.confirmDelete": false,
     "zenMode.hideLineNumbers": false,
     "editor.accessibilitySupport": "off",
@@ -130,6 +132,12 @@
     ],
     "opa.bundleMode": true,
     "editor.lineNumbers": "relative",
-    "workbench.colorTheme": "One Dark Pro Mix",
+    "workbench.colorTheme": "Quiet Light",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "workbench.colorCustomizations": {
+    },
+    "workbench.settings.applyToAllProfiles": [
+        "workbench.colorCustomizations"
+    ],
     "workbench.statusBar.visible": false
 }
