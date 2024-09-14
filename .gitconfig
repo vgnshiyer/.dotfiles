@@ -1,10 +1,10 @@
 [user]
 	name = Vignesh Iyer
 	email = vgnshiyer@asu.edu
-[credential]
-	helper = osxkeychain
-[credentials]
-	helper = osxkeychain
 
 [includeIf "gitdir:~/work-repos/"]
     path = ~/work-repos/.gitconfig
+[includeIf "gitdir:~/repos/capstone/"]
+    path = ~/repos/capstone/.gitconfig
+[credentials]
+	helper = store

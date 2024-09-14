@@ -13,13 +13,11 @@
     "breadcrumbs.enabled": false,
     "liveshare.accessibility.soundsEnabled": false,
     "github.copilot.enable": {
-        "*": false,
-        "plaintext": true,
+        "*": true,
+        "plaintext": false,
         "markdown": true,
-        "scminput": false
-    },
-    "[javascriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "scminput": false,
+        "rust": false
     },
     "workbench.iconTheme": "vscode-icons",
     "terminal.integrated.cursorBlinking": true,
@@ -112,7 +110,7 @@
         {
             "before": ["<C-u>"],
             "after": ["<C-u>", "z", "z"]
-        },
+        }
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
         {
@@ -132,12 +130,17 @@
     ],
     "opa.bundleMode": true,
     "editor.lineNumbers": "relative",
-    "workbench.colorTheme": "Quiet Light",
-    "liveServer.settings.donotShowInfoMsg": true,
-    "workbench.colorCustomizations": {
-    },
+    "workbench.colorTheme": "Dark SynthWave '84",
+    "git.openRepositoryInParentFolders": "never",
+    "workbench.editor.revealIfOpen": true,
+    "workbench.tree.indent": 20,
     "workbench.settings.applyToAllProfiles": [
         "workbench.colorCustomizations"
     ],
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    },
+    "editor.linkedEditing": true,
+    "editor.unicodeHighlight.includeComments": true,
     "workbench.statusBar.visible": false
 }

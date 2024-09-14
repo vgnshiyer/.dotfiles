@@ -40,3 +40,5 @@ alias nv="nvim"
 
 # work specific (wont necessarily work on other machines)
 alias rvim="vim svcenomis"
+alias lgstg="ssh svcenomis@sc-ipp-apsbackend-stg-vm-001"
+alias lgstg2="ssh svcenomis@sc-ipp-apsbackendworker-stg-vm-001"

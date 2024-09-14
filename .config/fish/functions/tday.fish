@@ -15,5 +15,5 @@ function tday
     end
 
     cp $template_file $filename
-    vim $filename
+    nv $filename
 end
