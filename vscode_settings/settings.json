@@ -13,7 +13,7 @@
     "breadcrumbs.enabled": false,
     "liveshare.accessibility.soundsEnabled": false,
     "github.copilot.enable": {
-        "*": true,
+        "*": false,
         "plaintext": false,
         "markdown": true,
         "scminput": false,
@@ -141,6 +141,5 @@
         "source.organizeImports": "explicit"
     },
     "editor.linkedEditing": true,
-    "editor.unicodeHighlight.includeComments": true,
-    "workbench.statusBar.visible": false
+    "editor.unicodeHighlight.includeComments": true
 }
