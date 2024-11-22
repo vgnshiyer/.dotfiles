@@ -8,10 +8,15 @@
 ## 1. Devices
 
 **Primary**
+
 Device: Macbook Air
+
 OS: MacOS(Sonama)
+
 Ram: 8gb
+
 Chip: Apple M1
+
 Tools:
  - Arc Browser
  - AdBlock
