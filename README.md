@@ -20,11 +20,13 @@ Chip: Apple M1
 Tools:
  - Arc Browser
  - AdBlock
- - Vimium (operate links with keyboard)
+ - Vimium (operate your browser with Vim controls)
  - Maccy (clipboard manager)
+ - Homerow (Navitgate accross Mac OS applications with Vim controls)
+ - KindaVim (Use Vim controls across text inputs in Mac OS)
 
 **Secondary**
-Device: Ipad 9
+Device: Ipad 9 
 OS: IpadOS 17
 Tools: 
  - WorkingCopy
