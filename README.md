@@ -1,8 +1,8 @@
 # vgnshiyer's dotfiles
 
 <img width="1470" alt="Screenshot 2024-06-17 at 8 33 20 AM" src="https://github.com/vgnshiyer/.dotfiles/assets/39982819/369252ee-1af6-491e-b6e3-fafc05fb1c6d">
-<img width="1470" alt="Screenshot 2024-06-20 at 4 14 36 PM" src="https://github.com/vgnshiyer/.dotfiles/assets/39982819/5fc2d4b3-4920-4117-8ee1-54d4edebb84f">
-<img width="1470" alt="Screenshot 2024-06-20 at 5 34 14 PM" src="https://github.com/vgnshiyer/.dotfiles/assets/39982819/0ed9a5e2-10cb-4ef2-9405-2e74eb90e5bc">
+<img width="1470" alt="Screenshot 2024-11-23 at 8 52 46 AM" src="https://github.com/user-attachments/assets/13f021c5-ccb0-4151-a370-7f2760c6f0e8">
+<img width="1470" alt="Screenshot 2024-11-23 at 8 54 04 AM" src="https://github.com/user-attachments/assets/c2496911-cff7-423d-a8bf-5e8fe6da64fc">
 
 
 ## 1. Devices
@@ -20,11 +20,13 @@ Chip: Apple M1
 Tools:
  - Arc Browser
  - AdBlock
- - Vimium (operate links with keyboard)
+ - Vimium (operate your browser with Vim controls)
  - Maccy (clipboard manager)
+ - Homerow (Navitgate accross Mac OS applications with Vim controls)
+ - KindaVim (Use Vim controls across text inputs in Mac OS)
 
 **Secondary**
-Device: Ipad 9
+Device: Ipad 9 
 OS: IpadOS 17
 Tools: 
  - WorkingCopy
@@ -147,7 +149,7 @@ ln -s /Users/vgnshiyer/.dotfiles/vscode_settings/settings.json /Users/vgnshiyer/
 ln -s /Users/vgnshiyer/.dotfiles/vscode_settings/keybindings.json /Users/vgnshiyer/Library/Application\ Support/Code/User/keybindings.json
 ```
 
-2. I use vim also. Replicate my vim setup with my `.vimrc` file. Install vim-plug as the plugin manager for vim.
+2. I use vim also. Replicate my vim setup with my `.vimrc` file. Install vim-plug as the plugin manager for vim. (Deprecated: I use nvim now)
 ```bash
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
