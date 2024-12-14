@@ -1,1 +1,3 @@
 .config/github-copilot/
+.config/nvim/plugin/packer_compiled.lua
+.config/coc/extensions/node_modules/
