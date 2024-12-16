@@ -1,7 +1,10 @@
 require('lualine').setup {
-    options = {
-        theme = 'jellybeans',
-    },
+  options = {
+    icons_enabled = true,
+    theme = 'dracula',
+  },
+  extensions = {
+    'nvim-tree'
+  }
 }
-
 

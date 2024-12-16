@@ -4,12 +4,12 @@ blink_interval = 500
 
 [cursor.style]
 blinking = "Always"
+
 [font]
 size = 16.0
 
 [font.normal]
-family = "SFMono Nerd Font"
-style = "Regular"
+family = "JetBrainsMono Nerd Font"
 
 [window]
 decorations = "buttonless"

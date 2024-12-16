@@ -1,10 +1,25 @@
 local lsp_zero = require('lsp-zero')
 
-lsp_zero.on_attach(function(client, bufnr)
-  lsp_zero.default_keymaps({buffer = bufnr})
+-- Fix Undefined global 'vim'
+lsp_zero.configure('lua_ls', {
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { 'vim' },
+      },
+    },
+  },
+})
 
-  -- overriding default keymapslsp
-  vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', {buffer = bufnr})
+lsp_zero.on_attach(function(_, bufnr)
+  local opts = { buffer = bufnr, remap = false }
+
+  vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+  vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', opts)
+  vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, opts)
+  vim.keymap.set('n', 'gh', vim.lsp.buf.hover, opts)
+  vim.keymap.set('n', '[d', vim.diagnostic.goto_next, opts)
+  vim.keymap.set('n', ']d', vim.diagnostic.goto_prev, opts)
 end)
 
 -- format on save
@@ -14,7 +29,7 @@ lsp_zero.format_on_save({
     timeout_ms = 10000,
   },
   servers = {
-    ['tsserver'] = {'javascript', 'typescript'},
+    ['ts_ls'] = {'javascript', 'typescript'},
     ['rust_analyzer'] = {'rust'},
     ['pylsp'] = {'python'},
   }
@@ -25,15 +40,29 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
   -- add servers here for mason to automatically add
   ensure_installed = {
-	  'tsserver',
+	  'ts_ls',
 	  'rust_analyzer',
 	  'eslint',
-      'pyright'
+      'pyright',
+      'lua_ls'
   },
   handlers = {
-    function(server_name)
-      require('lspconfig')[server_name].setup({})
+    lsp_zero.default_setup,
+    lua_ls = function()
+      local lua_opts = lsp_zero.nvim_lua_ls()
+      require('lspconfig').lua_ls.setup(lua_opts)
     end,
+    pylsp = function ()
+      require('lspconfig').pylsp.setup({
+        settings = {
+          pylsp = {
+            plugins = {
+              pycodestyle = { maxLineLength = 120 }
+            }
+          }
+        }
+      })
+    end
   },
 })
 
@@ -50,17 +79,26 @@ local cmp = require('cmp')
 cmp.setup({
   -- snippets 
   sources = {
-	  {name = 'nvim_lsp'},
-	  {name = 'luasnip'},
+	{name = 'nvim_lsp'},
+	{name = 'luasnip'},
   },
   -- custom mappings
   mapping = cmp.mapping.preset.insert({
-    ['<CR>'] = cmp.mapping.confirm({select = true}),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+    ['<Tab>'] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
+    ['<S-Tab>'] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
   }),
   snippet = {
 	expand = function (args)
-		require('luasnip').lsp_expand(args.body)
+	  require('luasnip').lsp_expand(args.body)
 	end,
   }
 })
+
+vim.diagnostic.config({
+  virtual_text = false,
+})
+
+vim.o.updatetime = 250
+vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
