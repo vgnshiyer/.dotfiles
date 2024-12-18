@@ -1,3 +1,3 @@
 function sb
-    cd ~/Documents/second-brain/ && cursor .
+    cd ~/Documents/second-brain/ && nv .
 end

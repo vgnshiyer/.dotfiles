@@ -100,5 +100,6 @@ vim.diagnostic.config({
 })
 
 vim.o.updatetime = 250
-vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
-
+vim.keymap.set('n', '<leader>e', function()
+  vim.diagnostic.open_float(nil, { focus = false })
+end, { noremap = true, silent = true, desc = "Show diagnostics" })

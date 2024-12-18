@@ -26,8 +26,11 @@ Tools:
  - KindaVim (Use Vim controls across text inputs in Mac OS)
 
 **Secondary**
+
 Device: Ipad 9 
+
 OS: IpadOS 17
+
 Tools: 
  - WorkingCopy
 
