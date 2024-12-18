@@ -171,5 +171,14 @@ return require('packer').startup(function(use)
       "MunifTanjim/nui.nvim",
     }
   }
+
+  -- copilot
+  use {
+    "robitx/gp.nvim",
+    -- chats are stored here: ~/.local/share/nvim/gp/chats 
+    requires = {
+      { 'github/copilot.vim' }
+    }
+  }
 end)
 
