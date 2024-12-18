@@ -262,5 +262,21 @@ require("neo-tree").setup({
         }
     },
 
-    vim.keymap.set('n', '<F3>', '<Cmd>Neotree toggle<CR>')
+    vim.keymap.set('n', '<F3>', function()
+      local neotree_open = false
+
+      for _, win in ipairs(vim.api.nvim_list_wins()) do
+        if vim.bo[vim.api.nvim_win_get_buf(win)].filetype == 'neo-tree' then
+          neotree_open = true
+          break
+        end
+      end
+
+      -- reveals and focusses current file
+      if neotree_open then
+        vim.cmd('Neotree close')
+      else
+        vim.cmd('Neotree filesystem reveal')
+      end
+    end, { desc = "Toggle Neotree or reveal the filesystem" })
 })

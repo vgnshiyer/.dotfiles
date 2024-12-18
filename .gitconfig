@@ -1,6 +1,6 @@
 [user]
 	name = Vignesh Iyer
-    email = vgnshiyer@gamil.com
+    email = vgnshiyer@gmail.com
 
 [includeIf "gitdir:~/work-repos/"]
     path = ~/work-repos/.gitconfig
