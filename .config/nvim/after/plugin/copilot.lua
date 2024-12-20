@@ -27,7 +27,11 @@ require("gp").setup({
         temperature = 1.1,
         top_p = 1
       },
-      system_prompt = require("gp.defaults").chat_system_prompt,
+      system_prompt = "You are a general AI assistant."
+          .. "The user provided the additional info about how they would like you to respond:\n\n"
+          .. "- If you are unsure, say you are unsure.\n"
+          .. "- Ask question if you need clarification to provide better answer.\n"
+          .. "- Try to answer in short unless asked for detailed explanation. Do not waste user's time.\n" ,
     }
     -- configure later
     -- {
@@ -38,6 +42,7 @@ require("gp").setup({
   -- chat window setup
   chat_user_prefix = "You:",
   chat_assistant_prefix = { "Agent: ", "[{{agent}}]" },
+  chat_template = require("gp.defaults").short_chat_template,
   toggle_target = "popup",
   style_popup_border = "rounded",
   style_popup_max_width = 100,
