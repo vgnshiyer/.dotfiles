@@ -19,7 +19,7 @@ require("gp").setup({
   agents = {
     {
       provider = "copilot",
-      name = "github-copilot",
+      name = "ChatCopilot",
       chat = true,
       command = false,
       model = {
@@ -41,7 +41,7 @@ require("gp").setup({
 
   -- chat window setup
   chat_user_prefix = "You:",
-  chat_assistant_prefix = { "Agent: ", "[{{agent}}]" },
+  chat_assistant_prefix = { "Copilot: ", "[{{agent}}]" },
   chat_template = require("gp.defaults").short_chat_template,
   toggle_target = "popup",
   style_popup_border = "rounded",
@@ -50,17 +50,17 @@ require("gp").setup({
 
 -- shortcuts
 local function keymapOptions(desc)
-    return {
-        noremap = true,
-        silent = true,
-        nowait = true,
-        desc = "GPT prompt " .. desc,
-    }
+  return {
+    noremap = true,
+    silent = true,
+    nowait = true,
+    desc = "GPT prompt " .. desc,
+  }
 end
 
 -- ci --> chat init / cci --> chat copy init / cr --> chat respond / na --> next agent
 vim.keymap.set({"n"}, "<leader>ci", "<cmd>GpChatToggle popup<cr>", keymapOptions("Toggle Chat"))
-vim.keymap.set("v", "<leader>ci", ":GpChatToggle<cr>", keymapOptions("Visual Toggle Chat"))
+vim.keymap.set("v", "<leader>ci", ":GpChatToggle popup<cr>", keymapOptions("Visual Toggle Chat"))
 vim.keymap.set({"n"}, "<leader>ni", "<cmd>GpChatNew popup<cr>", keymapOptions("Toggle New Chat"))
 vim.keymap.set({"n"}, "<leader>cr", "<cmd>GpChatRespond<cr>", keymapOptions("Respond"))
 vim.keymap.set({"n"}, "<leader>na", "<cmd>GpNextAgent<cr>", keymapOptions("Next Agent"))

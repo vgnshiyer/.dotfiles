@@ -174,17 +174,23 @@ chars = "\uE019"
 key = "F"
 mods = "Command"
 
-# commend a line
+# comment a line
 [[keyboard.bindings]]
 chars = "\uE026"
 key = "/"
 mods = "Command"
 
-# open copilot chat
+# switch tabs in neovim
 [[keyboard.bindings]]
 chars = "\uE027"
-key = "I"
-mods = "Command|Shift"
+key = "Tab"
+mods = "Control"
+
+# close buffer in neovim
+[[keyboard.bindings]]
+chars = "\uE028"
+key = "W"
+mods = "Alt"
 
 [general]
 live_config_reload = true

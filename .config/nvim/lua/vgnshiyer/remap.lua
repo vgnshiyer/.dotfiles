@@ -25,9 +25,6 @@ vim.keymap.set("n", "y", "\"+y")
 vim.keymap.set("v", "y", "\"+y")
 vim.keymap.set("n", "Y", "\"+Y")
 
-vim.keymap.set("n", "d", "\"_d")
-vim.keymap.set("v", "d", "\"_d")
-
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- option + backspace (delete entire previous word)

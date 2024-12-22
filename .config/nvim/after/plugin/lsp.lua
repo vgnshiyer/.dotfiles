@@ -62,7 +62,7 @@ require('mason-lspconfig').setup({
           }
         }
       })
-    end
+    end,
   },
 })
 
@@ -72,6 +72,16 @@ lsp_zero.set_sign_icons({
   hint = '⚑',
   info = '»'
 })
+
+-- snippets
+require("luasnip.loaders.from_vscode").lazy_load()
+
+local luasnip = require("luasnip")
+
+-- Extend snippets for specific filetypes
+luasnip.filetype_extend("javascript", {"html"})
+luasnip.filetype_extend("typescriptreact", {"html"})
+luasnip.filetype_extend("python", {"django"})
 
 -- autocompletion
 local cmp = require('cmp')
@@ -103,3 +113,4 @@ vim.o.updatetime = 250
 vim.keymap.set('n', '<leader>e', function()
   vim.diagnostic.open_float(nil, { focus = false })
 end, { noremap = true, silent = true, desc = "Show diagnostics" })
+
