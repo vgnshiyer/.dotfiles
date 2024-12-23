@@ -56,25 +56,25 @@ return require('packer').startup(function(use)
       "3rd/image.nvim",
     }
   }
-  use {
-    'akinsho/bufferline.nvim',
-    branch = 'main',
-    dependencies = { 'kyazdani42/nvim-web-devicons' },
-    config = function()
-      require('bufferline').setup({
-        options = {
-          offsets = {
-            {
-              filetype = "neo-tree",
-              text = "File Explorer",
-              highlight = "Directory",
-              text_align = "left"
-            }
-          }
-        }
-      })
-    end,
-  }
+  -- use {
+  --   'akinsho/bufferline.nvim',
+  --   branch = 'main',
+  --   dependencies = { 'kyazdani42/nvim-web-devicons' },
+  --   config = function()
+  --     require('bufferline').setup({
+  --       options = {
+  --         offsets = {
+  --           {
+  --             filetype = "neo-tree",
+  --             text = "File Explorer",
+  --             highlight = "Directory",
+  --             text_align = "left"
+  --           }
+  --         }
+  --       }
+  --     })
+  --   end,
+  -- }
 
   -- commenting
   use {

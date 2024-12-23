@@ -41,7 +41,7 @@ require("neo-tree").setup({
 })
 
 -- cycle buffers
-vim.keymap.set('n', '<F20>', '<cmd>BufferLineCycleNext<cr>', { desc = "Cycle to next buffer" })
+-- vim.keymap.set('n', '<F20>', '<cmd>BufferLineCycleNext<cr>', { desc = "Cycle to next buffer" })
 
 -- close current buffer
-vim.keymap.set('n', '<F21>', '<cmd>bd<cr>', { desc = "Close current buffer" })
+-- vim.keymap.set('n', '<F21>', '<cmd>bd<cr>', { desc = "Close current buffer" })
