@@ -160,3 +160,9 @@ alt - t : yabai -m window --toggle float --grid 4:4:1:1:2:2
 
 # toggle sticky(+float), picture-in-picture
 # alt - p : yabai -m window --toggle sticky --toggle pip
+
+# Increase Alacritty opacity
+cmd + shift - up : alacritty-opacity.sh up
+
+# Decrease Alacritty opacity
+cmd + shift - down : alacritty-opacity.sh down

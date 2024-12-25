@@ -15,6 +15,7 @@ return require('packer').startup(function(use)
   -- colorschemes
   use { "rebelot/kanagawa.nvim", name = "kanagawa" }
   use { 'rose-pine/neovim', name = 'rose-pine' }
+  use { 'folke/tokyonight.nvim', name = 'tokyonight' }
   use 'zaldih/themery.nvim' -- theme switcher
 
   -- syntax highlighting
@@ -155,10 +156,17 @@ return require('packer').startup(function(use)
           },
           packages = { enable = false },
           header = vim.split(logo, "\n"),
+          project = { limit = 6 },
           footer = {}
         }
       }
       vim.api.nvim_set_hl(0, "DashboardHeader", { fg = "#FFBD38", bold = true })
+      vim.api.nvim_create_autocmd("ColorScheme", {
+        pattern = "*",
+        callback = function()
+          vim.api.nvim_set_hl(0, "DashboardHeader", { fg = "#FFBD38", bold = true })
+        end,
+      })
     end,
     requires = {'nvim-tree/nvim-web-devicons'}
   }
