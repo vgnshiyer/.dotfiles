@@ -15,7 +15,6 @@ return require('packer').startup(function(use)
   -- colorschemes
   use { "rebelot/kanagawa.nvim", name = "kanagawa" }
   use { 'rose-pine/neovim', name = 'rose-pine' }
-  use { 'folke/tokyonight.nvim', name = 'tokyonight' }
   use 'zaldih/themery.nvim' -- theme switcher
 
   -- syntax highlighting
@@ -57,25 +56,6 @@ return require('packer').startup(function(use)
       "3rd/image.nvim",
     }
   }
-  -- use {
-  --   'akinsho/bufferline.nvim',
-  --   branch = 'main',
-  --   dependencies = { 'kyazdani42/nvim-web-devicons' },
-  --   config = function()
-  --     require('bufferline').setup({
-  --       options = {
-  --         offsets = {
-  --           {
-  --             filetype = "neo-tree",
-  --             text = "File Explorer",
-  --             highlight = "Directory",
-  --             text_align = "left"
-  --           }
-  --         }
-  --       }
-  --     })
-  --   end,
-  -- }
 
   -- commenting
   use {
@@ -219,6 +199,13 @@ return require('packer').startup(function(use)
   use {
     'lewis6991/gitsigns.nvim',
     requires = { 'nvim-lua/plenary.nvim' }
+  }
+
+  use {
+    'xiyaowong/transparent.nvim',
+    config = function()
+      require('transparent').setup()
+    end
   }
 end)
 

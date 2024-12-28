@@ -16,6 +16,9 @@ require('kanagawa').setup({
       },
     },
   },
+
+  vim.cmd 'highlight TelescopeBorder guibg=none',
+  vim.cmd 'highlight TelescopeTitle guibg=none',
 })
 
 require("rose-pine").setup({
@@ -36,20 +39,6 @@ require("rose-pine").setup({
   },
 })
 
-require("tokyonight").setup({
-  style = "night", -- night, storm, day
-  transparent = true,
-  italic_comments = true,
-  italic_keywords = true,
-  italic_functions = true,
-  italic_variables = true,
-  contrast = true,
-  hide_inactive_statusline = true,
-  dark_sidebar = true,
-  dark_float = true,
-  sidebars = { "qf", "vista_kind", "terminal", "packer" },
-})
-
 -- theme switcher
 require("themery").setup({
   themes = {
@@ -62,11 +51,6 @@ require("themery").setup({
     "kanagawa-dragon",
     "kanagawa-lotus",
     "kanagawa-wave",
-
-    "tokyonight",
-    "tokyonight-night",
-    "tokyonight-storm",
-    "tokyonight-day",
   },
   livePreview = true,
 })
@@ -77,7 +61,7 @@ vim.keymap.set('n', '<leader>tt', ':Themery<CR>')
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = 'gruvbox_light',
+    theme = 'gruvbox_dark',
   },
   extensions = {
     'nvim-tree'
