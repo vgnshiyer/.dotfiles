@@ -61,7 +61,7 @@ vim.keymap.set('n', '<leader>tt', ':Themery<CR>')
 require('lualine').setup {
   options = {
     icons_enabled = true,
-    theme = 'gruvbox_dark',
+    theme = 'gruvbox_light',
   },
   extensions = {
     'nvim-tree'
