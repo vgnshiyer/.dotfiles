@@ -14,7 +14,7 @@ family = "JetBrainsMono Nerd Font"
 [window]
 decorations = "buttonless"
 dynamic_padding = false
-opacity = 0.90
+opacity = 0.70
 
 [window.padding]
 x = 18

@@ -1,18 +1,4 @@
-require('neogit').setup({
-  disable_line_numbers = false,
-  mappings = {
-    status = {
-      ["<space>"] = "Toggle",
-      ["[c"] = "GoToPreviousHunkHeader",
-      ["]c"] = "GoToNextHunkHeader",
-    },
-  },
-  integrations = {
-    telescope = true,
-  }
-})
-
-vim.keymap.set('n', '<leader>gg', '<cmd>Neogit<CR>', { noremap = true })
+vim.keymap.set('n', '<leader>lg', '<cmd>LazyGit<CR>', { noremap = true })
 
 require('gitsigns').setup({
   on_attach = function (bufnr)
@@ -31,10 +17,10 @@ require('gitsigns').setup({
 })
 
 -- git graph
-local function open_git_log_graph()
-  vim.cmd('tabnew')
-  vim.cmd('terminal git log --oneline --graph --decorate --all')
-  vim.cmd('startinsert')
-end
-
-vim.keymap.set("n", "<leader>lg", open_git_log_graph)
+-- local function open_git_log_graph()
+--   vim.cmd('tabnew')
+--   vim.cmd('terminal git log --oneline --graph --decorate --all')
+--   vim.cmd('startinsert')
+-- end
+--
+-- vim.keymap.set("n", "<leader>lg", open_git_log_graph)
