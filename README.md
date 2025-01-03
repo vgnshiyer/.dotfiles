@@ -1,178 +1,19 @@
 # vgnshiyer's dotfiles
 
-<img width="1470" alt="Screenshot 2024-06-17 at 8 33 20 AM" src="https://github.com/vgnshiyer/.dotfiles/assets/39982819/369252ee-1af6-491e-b6e3-fafc05fb1c6d">
-<img width="1440" alt="Screenshot 2024-12-17 at 4 08 46 PM" src="https://github.com/user-attachments/assets/1652472a-15c1-46b4-b4ba-ac49decd0d5b" />
-<img width="1470" alt="Screenshot 2024-11-23 at 8 54 04 AM" src="https://github.com/user-attachments/assets/c2496911-cff7-423d-a8bf-5e8fe6da64fc">
+<img width="1440" alt="Screenshot 2025-01-02 at 10 04 40 AM" src="https://github.com/user-attachments/assets/2ffa203b-f7c0-4df9-8731-167c7009f7f5" />
+<img width="1440" alt="Screenshot 2025-01-02 at 9 58 06 AM" src="https://github.com/user-attachments/assets/5b9a0b2d-0635-4052-a0d4-d99fb88dce00" />
+<img width="1440" alt="Screenshot 2025-01-02 at 10 02 09 AM" src="https://github.com/user-attachments/assets/b076e77b-1df4-46e2-8672-8c5ea5b383cc" />
 
 
-## 1. Devices
-
-**Primary**
-
-Device: Macbook Air
-
-OS: MacOS(Sonama)
-
-Ram: 8gb
-
-Chip: Apple M1
-
-Tools:
- - Arc Browser
- - AdBlock
- - Vimium (operate your browser with Vim controls)
- - Maccy (clipboard manager)
- - Homerow (Navitgate accross Mac OS applications with Vim controls)
- - KindaVim (Use Vim controls across text inputs in Mac OS)
-
-**Secondary**
-
-Device: Ipad 9 
-
-OS: IpadOS 17
-
-Tools: 
- - WorkingCopy
-
-## 2. Dev workflow
-
-### 2.1 Shell
-
-1. Install Apple's CLI tools
-```
-bash xcode-select --install
-```
-
-2. Clone repo into a new directory
-```bash
-git clone https://github.com/vgnshiyer/.dotfiles ~/.dotfiles
-```
-
-3. Install Homebrew, and software listed in brewfile
-```bash
-# Install Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# Add Homebrew to PATH
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
-
-# Install software from Brewfile
-brew bundle --file ~/.dotfiles/Brewfile
-```
-
-4. Configure git
-```bash
-# Set your global Git username and email
-git config --global user.name "YOUR_NAME"
-git config --global user.email your@email
-
-# Set Git to use the OSX keychain as the credential helper [Credentials will be stored] (`store` option will be stored as plaintext)
-git config --global credentials.helper osxkeychain
-```
-
-5. Track changes with stow
-```bash
-stow .
-```
-
-### 2.2 Terminal
-
-1. Install fish cli
-```bash
-# install fish
-brew install fish
-
-# add fish to shells
-echo /opt/homebrew/bin/fish | sudo tee -a /etc/shells
-
-# change default shell
-chsh -s /opt/homebrew/bin/fish
-
-# Update fish config
-stow . --force
-```
-
-2. Install alacritty
-```bash
-brew install --cask alacritty
-
-# add fonts
-brew tap epk/epk
-
-# install sf-mono-nerd-font
-brew install --cask font-sf-mono-nerd-font
-
-# install starship
-brew install startship
-```
-
-3. Install tmux
-```bash
-# Install tmux
-brew install tmux
-```
-
-### 2.3 MacOS system settings
-
-Have this clutter-free look to mac os
-
-1. Automatically Hide dock & menu bar
-2. Configure keyboard shortcuts
-```txt
-keyboard shortcutes --> Mission Control
-  1. ⌥ Option + 1 : switch to window 1
-  2. ⌥ Option + 2 : switch to window 2
-  3. ⌥ Option + 3 : switch to window 3
-```
-
-### 2.4 Window manager
-
-1. Install yabai
-```bash
-# Install yabai: https://github.com/koekeishiya/yabai
-brew install koekeishiya/formulae/yabai
-
-# Install skhd
-brew install koekeishiya/formulae/skhd
-
-# Start services
-skhd --start-service
-yabai --start-service
-```
-
-### 2.5 Code Editor
-
-1. Link vscode settings
-```bash
-# remove existing files
-rm ~/Library/Application\ Support/Code/User/settings.json ~/Library/Application\ Support/Code/User/keybindings.json
-
-# link settings
-ln -s /Users/vgnshiyer/.dotfiles/vscode_settings/settings.json /Users/vgnshiyer/Library/Application\ Support/Code/User/settings.json
-ln -s /Users/vgnshiyer/.dotfiles/vscode_settings/keybindings.json /Users/vgnshiyer/Library/Application\ Support/Code/User/keybindings.json
-```
-
-2. I use vim also. Replicate my vim setup with my `.vimrc` file. Install vim-plug as the plugin manager for vim. (Deprecated: I use nvim now)
-```bash
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-
-3. Open `.vimrc` and type the command `:PlugInstall`.
-
-4. **Installing language servers:** When opening a new file, type `:LspInstallServer`. This installs the appropriate language server for the filetype.
-
-**Note:** Do not add `.vim/` to source control. Vim-plug manages updates to plugins in the `.vim/plugged/` directory via git.
-
-## 3 Bonus 
-
-1. Add pokefetch to your terminal session (Display a random pokemon along with system info to your terminal)
-```bash
-sudo ln -s ~/.dotfiles/bin/pokefetech/pokefetch.py /usr/local/bin/pokefetch
-```
-2. Add them to your fish config (or zshrc) [here](https://github.com/vgnshiyer/.dotfiles/blob/main/.config/fish/config.fish).
-
-3. **Notetaking:** I have commands `zet`, `tday` and `sb` for my notetaking workflow which is integrated with Obsidian for cross-platform access.
-- `zet` --> opens a quick note with my default template.
-- `tday` --> opens today's daily note.
-- `sb` --> this command opens my second-brain directory which consists of all my notes. Find it [here](https://github.com/vgnshiyer/second-brain)
+## Tools:
+ - 💻 → nvim
+ - 💻 → fish cli
+ - 💻 → alacritty
+ - 💻 → tmux
+ - 💻 → Vscode (occasionally for using the debugger)
+ - 🌐 → Arc Browser
+ - ⛔️ → Pie Ad blocker
+ - 👨‍💻 → Vimium (operate your browser with Vim controls)
+ - 👨‍💻 → Maccy (clipboard manager)
+ - 👨‍💻 → Homerow (Navitgate accross Mac OS applications with Vim controls)
+ - 👨‍💻 → Yabai (window manager → looking to find an alternative since SIP in Sequoia disabled some features)
