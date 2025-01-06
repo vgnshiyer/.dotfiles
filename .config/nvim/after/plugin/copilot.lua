@@ -62,5 +62,5 @@ end
 vim.keymap.set({"n"}, "<leader>ci", "<cmd>GpChatToggle split<cr>", keymapOptions("Toggle Chat"))
 vim.keymap.set("v", "<leader>ci", ":GpChatToggle split<cr>", keymapOptions("Visual Toggle Chat"))
 vim.keymap.set({"n"}, "<leader>ni", "<cmd>GpChatNew split<cr>", keymapOptions("Toggle New Chat"))
-vim.keymap.set({"n"}, "<leader>cr", "<cmd>GpChatRespond<cr>", keymapOptions("Respond"))
+vim.keymap.set({"n"}, "<leader>cc", "<cmd>GpChatRespond<cr>", keymapOptions("Respond"))
 vim.keymap.set({"n"}, "<leader>na", "<cmd>GpNextAgent<cr>", keymapOptions("Next Agent"))
