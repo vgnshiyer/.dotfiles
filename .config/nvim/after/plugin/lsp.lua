@@ -40,10 +40,7 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
   -- add servers here for mason to automatically add
   ensure_installed = {
-	  'ts_ls',
 	  'rust_analyzer',
-	  'eslint',
-      'pyright',
       'lua_ls'
   },
   handlers = {

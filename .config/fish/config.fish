@@ -10,8 +10,8 @@
 # add homebrew to path
 eval (/opt/homebrew/bin/brew shellenv)
 
-starship init fish | source # https://starship.rs/
-zoxide init fish | source # https://github.com/ajeetdsouza/zoxide
+starship init fish | source
+zoxide init fish | source
 fzf --fish | source
 
 set -U fish_greeting # disable fish greeting
@@ -20,8 +20,9 @@ set -U fish_greeting # disable fish greeting
 set ppid (ps -o ppid= -p $fish_pid)
 set parent (ps -o comm= -p $ppid)
 
+set -gx PATH $HOME/.dotfiles/bin/pokefetch/ $PATH
 if not string match -rq fzf $parent
-    pokefetch -r
+    pokefetch.py -r
 end
 
 
